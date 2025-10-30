@@ -12,7 +12,6 @@ btn.addEventListener('click', async () => {
   }
 });
 
-// Accordion simples e acessível para o FAQ
 document.querySelectorAll('.faq-item').forEach((item) => {
   const btn = item.querySelector('.faq-q');
   const panel = item.querySelector('.faq-a');
@@ -33,7 +32,6 @@ document.querySelectorAll('.faq-item').forEach((item) => {
     }
   });
 
-  // Acessibilidade: toggle com Enter/Espaço quando focado
   btn.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
