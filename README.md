@@ -60,7 +60,6 @@ A mentoria é um espaço acolhedor e direto, com conversas técnicas que destrav
 
 ## 📫 Contato
 
-* 💬 WhatsApp: [11 98485-3856](https://wa.me/5511984853856)
 * 💌 E-mail: [jackeline_nascimento@hotmail.com](mailto:jackeline_nascimento@hotmail.com)
 * 💼 [LinkedIn](https://www.linkedin.com/in/jackelinenascimento)
 * 💻 [GitHub](https://github.com/jackelinenascimento)
