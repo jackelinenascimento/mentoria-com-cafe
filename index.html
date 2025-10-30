@@ -12,144 +12,164 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="antialiased selection:bg-violet-500/30 selection:text-white">
-  <!-- NAV -->
-  <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/0">
-    <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-      <a href="#top" class="flex items-center gap-2">
-        <span class="inline-block h-3 w-3 rounded-full" style="background:linear-gradient(135deg,var(--violet),var(--sky))"></span>
-        <span class="font-semibold tracking-wide" style="font-family:Poppins,system-ui">Mentoria com Café</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
-        <a class="hover:text-white" href="#como-funciona">Como funciona</a>
-        <a class="hover:text-white" href="#temas">Temas</a>
-        <a class="hover:text-white" href="#sobre">Sobre</a>
-      </nav>
-      <a href="#pix" class="btn-primary glow rounded-full px-4 py-2 text-sm font-medium">Agendar meu café</a>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="top" class="relative">
-    <div class="mx-auto max-w-6xl px-6 pt-14 pb-20 grid lg:grid-cols-2 items-center gap-10">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight" style="font-family:Poppins,system-ui">
-          Mentoria com Café<br/>
-          <span class="text-transparent bg-clip-text" style="background-image:linear-gradient(135deg,var(--sky),var(--violet))">Conversas técnicas que destravam sua carreira</span>
-        </h1>
-        <p class="mt-6 text-lg text-[color:var(--ink-2)]">
-          Sessões 1:1, diretas e acolhedoras, para alinhar objetivos, ganhar clareza e sair com um plano de ação —
-          sem perder a profundidade técnica.
-        </p>
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-          <a href="#pix" class="btn-primary glow rounded-full px-6 py-3 font-medium">Agendar meu café</a>
-          <a href="#como-funciona" class="btn-outline rounded-full px-6 py-3 font-medium">Como funciona</a>
+    
+    <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/0">
+        <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-2">
+                <span class="inline-block h-3 w-3 rounded-full" style="background:linear-gradient(135deg,var(--violet),var(--sky))"></span>
+                <span class="font-semibold tracking-wide" style="font-family:Poppins,system-ui">Mentoria com Café</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
+                <a class="hover:text-white" href="#como-funciona">Como funciona</a>
+                <a class="hover:text-white" href="#temas">Temas</a>
+                <a class="hover:text-white" href="#sobre">Sobre</a>
+            </nav>
+            <a href="#pix" class="btn-primary glow rounded-full px-4 py-2 text-sm font-medium">Agendar meu café</a>
         </div>
-        <div class="mt-8 flex flex-wrap gap-2 text-xs text-[color:var(--ink-2)]">
-            <span class="tag rounded-full px-3 py-1">Transição de Carreira</span>
-            <span class="tag rounded-full px-3 py-1">Backend no mercado de trabalho</span>
-            <span class="tag rounded-full px-3 py-1">Soft Skills vs Hard Skills</span>
-            <span class="tag rounded-full px-3 py-1">Evolução e Plano de Carreira</span>
-            <span class="tag rounded-full px-3 py-1">Primeiro Emprego em Tech</span>
-            <span class="tag rounded-full px-3 py-1">LinkedIn e Portfólio</span>
-            <span class="tag rounded-full px-3 py-1">Entrevistas Técnicas</span>
-            <span class="tag rounded-full px-3 py-1">Carreira Backend</span>
-            <span class="tag rounded-full px-3 py-1">Mentoria para Mulheres em Tech</span>        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- COMO FUNCIONA -->
-<section id="como-funciona">
-  <div class="mx-auto max-w-6xl px-6">
-    <!-- Título + Subtítulo -->
-    <header class="text-center mb-8">
-      <h2 class="text-2xl md:text-3xl font-bold" style="font-family:Poppins,system-ui">Como funciona</h2>
-      <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
-        Do formulário ao agendamento, em passos simples — com foco e acolhimento
-      </p>
     </header>
 
-    <!-- Cards -->
-    <div class="grid lg:grid-cols-3 gap-6">
-      <div class="glass rounded-2xl p-8">
-        <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Formato</h3>
-        <p class="text-[color:var(--ink-2)]">
-          Encontro individual, online (Google Meet/Zoom), até <strong>50 minutos</strong>.
-          Conversa objetiva e humana, com profundidade técnica.
-        </p>
-      </div>
+<section id="top" class="relative">
+  <div class="mx-auto max-w-4xl px-6 pt-12 pb-10 flex flex-col items-center text-center gap-6">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight" style="font-family:Poppins,system-ui">
+      Mentoria com Café<br/>
+      <span class="text-transparent bg-clip-text" style="background-image:linear-gradient(135deg,var(--sky),var(--violet))">
+        Conversas técnicas que destravam sua carreira
+      </span>
+    </h1>
 
-      <div class="glass rounded-2xl p-8">
-        <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Roteiro</h3>
-        <p class="text-[color:var(--ink-2)]">
-          Objetivo → diagnóstico → plano de ação → próximos passos.
-          Você sai sabendo exatamente o que fazer.
-        </p>
-      </div>
+    <p class="text-lg text-[color:var(--ink-2)] max-w-2xl">
+      Sessões 1:1, diretas e acolhedoras, para alinhar objetivos, ganhar clareza e sair com um plano de ação —
+      sem perder a profundidade técnica.
+    </p>
 
-      <div class="glass rounded-2xl p-8">
-        <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Contribuição</h3>
-        <p class="text-[color:var(--ink-2)]">
-          Valor simbólico <strong>a partir de R$ 35,00</strong> via Pix.
-          Após o pagamento, confirmamos o agendamento.
-        </p>
-      </div>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      <a href="#pix" class="btn-primary glow rounded-full px-6 py-3 font-medium">Agendar meu café</a>
+      <a href="#como-funciona" class="btn-outline rounded-full px-6 py-3 font-medium">Como funciona</a>
     </div>
 
-    <!-- Passos (opcional, ajuda muito a clareza) -->
-    <div class="grid md:grid-cols-3 gap-4 mt-6">
-      <div class="glass rounded-2xl p-6">
-        <p class="text-xs uppercase tracking-wide mb-1" style="color:var(--ink-2)">Passo 1</p>
-        <h4 class="font-semibold mb-1">Preencha o formulário</h4>
-        <p class="text-sm" style="color:var(--ink-2)">Nome, e-mail e tema que você quer conversar.</p>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <p class="text-xs uppercase tracking-wide mb-1" style="color:var(--ink-2)">Passo 2</p>
-        <h4 class="font-semibold mb-1">Envie o Pix</h4>
-        <p class="text-sm" style="color:var(--ink-2)">A partir de R$ 35,00 — chave por e-mail e QR disponibilizados.</p>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <p class="text-xs uppercase tracking-wide mb-1" style="color:var(--ink-2)">Passo 3</p>
-        <h4 class="font-semibold mb-1">Agende o horário</h4>
-        <p class="text-sm" style="color:var(--ink-2)">Receba o link e escolha seu horário (sessão de até 50 min).</p>
-      </div>
+    <div class="flex flex-wrap justify-center gap-2 text-xs text-[color:var(--ink-2)]">
+      <span class="tag rounded-full px-3 py-1">Transição de Carreira</span>
+      <span class="tag rounded-full px-3 py-1">Backend no mercado de trabalho</span>
+      <span class="tag rounded-full px-3 py-1">Soft Skills vs Hard Skills</span>
+      <span class="tag rounded-full px-3 py-1">Evolução e Plano de Carreira</span>
+      <span class="tag rounded-full px-3 py-1">Primeiro Emprego em Tech</span>
+      <span class="tag rounded-full px-3 py-1">LinkedIn e Portfólio</span>
+      <span class="tag rounded-full px-3 py-1">Entrevistas Técnicas</span>
+      <span class="tag rounded-full px-3 py-1">Carreira Backend</span>
+      <span class="tag rounded-full px-3 py-1">Mentoria para Mulheres em Tech</span>
     </div>
   </div>
 </section>
 
-
-  <!-- TEMAS -->
-  <section id="temas" class="py-6 pb-20">
+ <section id="como-funciona">
     <div class="mx-auto max-w-6xl px-6">
-      <h2 class="text-2xl md:text-3xl font-bold mb-6" style="font-family:Poppins,system-ui">Temas frequentes</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="glass rounded-2xl p-6">
-          <h4 class="font-semibold mb-2">Arquitetura & Boas Práticas</h4>
-          <p class="text-[color:var(--ink-2)]">Clean/Hexagonal, padrões, testes, refatoração e design evolutivo.</p>
+        <header class="text-center mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold" style="font-family:Poppins,system-ui">Como funciona</h2>
+            <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+                Do formulário ao agendamento, em passos simples — com foco e acolhimento
+            </p>
+        </header>
+        
+        <div class="grid lg:grid-cols-3 gap-6">
+            <div class="glass rounded-2xl p-8">
+                <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Formato</h3>
+                <p class="text-[color:var(--ink-2)]">
+                    Encontro individual, online (Google Meet/Zoom), até <strong>50 minutos</strong>.
+                    Conversa objetiva e humana, com profundidade técnica.
+                </p>
+            </div>
+            <div class="glass rounded-2xl p-8">
+                <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Roteiro</h3>
+                <p class="text-[color:var(--ink-2)]">
+                    Objetivo → diagnóstico → plano de ação → próximos passos.
+                    Você sai sabendo exatamente o que fazer.
+                </p>
+            </div>
+            <div class="glass rounded-2xl p-8">
+                <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Contribuição</h3>
+                <p class="text-[color:var(--ink-2)]">
+                    Valor simbólico <strong>a partir de R$ 35,00</strong> via Pix.
+                    Após o pagamento, confirmamos o agendamento.
+                </p>
+            </div>
         </div>
-        <div class="glass rounded-2xl p-6">
-          <h4 class="font-semibold mb-2">Backend</h4>
-          <p class="text-[color:var(--ink-2)]">Kotlin, Spring Boot, microservices, observabilidade e pipelines.</p>
+        
+        <div class="grid md:grid-cols-3 gap-4 mt-6">
+            <div class="glass rounded-2xl p-6">
+                <p class="text-xs uppercase tracking-wide mb-1" style="color:var(--ink-2)">Passo 1</p>
+                <h4 class="font-semibold mb-1">Preencha o formulário</h4>
+                <p class="text-sm" style="color:var(--ink-2)">Nome, e-mail e tema que você quer conversar.</p>
+            </div>
+            <div class="glass rounded-2xl p-6">
+                <p class="text-xs uppercase tracking-wide mb-1" style="color:var(--ink-2)">Passo 2</p>
+                <h4 class="font-semibold mb-1">Envie o Pix</h4>
+                <p class="text-sm" style="color:var(--ink-2)">A partir de R$ 35,00 — chave por e-mail e QR disponibilizados.</p>
+            </div>
+            <div class="glass rounded-2xl p-6">
+                <p class="text-xs uppercase tracking-wide mb-1" style="color:var(--ink-2)">Passo 3</p>
+                <h4 class="font-semibold mb-1">Agende o horário</h4>
+                <p class="text-sm" style="color:var(--ink-2)">Receba o link e escolha seu horário (sessão de até 50 min).</p>
+            </div>
         </div>
-        <div class="glass rounded-2xl p-6">
-          <h4 class="font-semibold mb-2">Carreira & Portfólio</h4>
-          <p class="text-[color:var(--ink-2)]">LinkedIn, GitHub, talks, storytelling técnico e networking.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h4 class="font-semibold mb-2">Estudos & Certificações</h4>
-          <p class="text-[color:var(--ink-2)]">Planos semanais, foco, materiais e métricas de progresso.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h4 class="font-semibold mb-2">Próximo passo na empresa</h4>
-          <p class="text-[color:var(--ink-2)]">Promoção, impacto, visibilidade e alinhamento com liderança.</p>
-        </div>
-        <div class="glass rounded-2xl p-6">
-          <h4 class="font-semibold mb-2">Transição com segurança</h4>
-          <p class="text-[color:var(--ink-2)]">Da base técnica ao posicionamento, sem perder a essência.</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
+
+
+<section id="temas" class="py-6">
+    <div class="mx-auto max-w-6xl px-6">
+        <header class="text-center mb-6">
+            <h2 class="text-2xl md:text-3xl font-bold" style="font-family:Poppins,system-ui">Temas frequentes</h2>
+            <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+                Do zero ao próximo nível: transição, primeiros passos e carreira backend
+            </p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass rounded-2xl p-6">
+                <h4 class="font-semibold mb-2">Transição com segurança</h4>
+                <p class="text-[color:var(--ink-2)]">
+                    Mapeamento de lacunas, plano de estudo e foco na prática para migrar com clareza.
+                </p>
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+                <h4 class="font-semibold mb-2">Primeiro emprego em Tech</h4>
+                <p class="text-[color:var(--ink-2)]">
+                Portfólio mínimo viável, currículo enxuto e estratégia de vagas/abordagem.
+                </p>
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+                <h4 class="font-semibold mb-2">Backend na prática</h4>
+                <p class="text-[color:var(--ink-2)]">
+                APIs REST, Kotlin/Spring Boot, testes, logs e observabilidade no dia a dia.
+                </p>
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+                <h4 class="font-semibold mb-2">Arquitetura & Boas práticas</h4>
+                <p class="text-[color:var(--ink-2)]">
+                Clean/Hexagonal, refatoração incremental e decisões técnicas com trade-offs.
+                </p>
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+                <h4 class="font-semibold mb-2">Entrevistas & processos</h4>
+                <p class="text-[color:var(--ink-2)]">
+                Estruturar respostas, live-coding, system design e storytelling técnico.
+                </p>
+            </div>
+
+            <div class="glass rounded-2xl p-6">
+                <h4 class="font-semibold mb-2">Visibilidade & carreira</h4>
+                <p class="text-[color:var(--ink-2)]">
+                LinkedIn, GitHub, talks, networking e plano de evolução estagiário→júnior.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
   <!-- PIX / AGENDAMENTO -->
 <section id="pix" class="py-20">
