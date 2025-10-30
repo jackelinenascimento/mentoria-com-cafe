@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentoria com Café — por Jackie Nascimento</title>
+  <meta name="description" content="Mentoria 1:1 com foco em backend, arquitetura e carreira em tecnologia. Sessões diretas, acolhedoras e técnicas com plano de ação claro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased selection:bg-violet-500/30 selection:text-white">
+  <!-- NAV -->
+  <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/0">
+    <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <span class="inline-block h-3 w-3 rounded-full" style="background:linear-gradient(135deg,var(--violet),var(--sky))"></span>
+        <span class="font-semibold tracking-wide" style="font-family:Poppins,system-ui">Mentoria com Café</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
+        <a class="hover:text-white" href="#como-funciona">Como funciona</a>
+        <a class="hover:text-white" href="#temas">Temas</a>
+        <a class="hover:text-white" href="#sobre">Sobre</a>
+      </nav>
+      <a href="#pix" class="btn-primary glow rounded-full px-4 py-2 text-sm font-medium">Agendar meu café</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative">
+    <div class="mx-auto max-w-6xl px-6 pt-14 pb-20 grid lg:grid-cols-2 items-center gap-10">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight" style="font-family:Poppins,system-ui">
+          Mentoria com Café<br/>
+          <span class="text-transparent bg-clip-text" style="background-image:linear-gradient(135deg,var(--sky),var(--violet))">Conversas técnicas que destravam sua carreira</span>
+        </h1>
+        <p class="mt-6 text-lg text-[color:var(--ink-2)]">
+          Sessões 1:1, diretas e acolhedoras, para alinhar objetivos, ganhar clareza e sair com um plano de ação —
+          sem perder a profundidade técnica (backend, arquitetura, carreira).
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#pix" class="btn-primary glow rounded-full px-6 py-3 font-medium">Agendar meu café</a>
+          <a href="#como-funciona" class="btn-outline rounded-full px-6 py-3 font-medium">Como funciona</a>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-2 text-xs text-[color:var(--ink-2)]">
+          <span class="tag rounded-full px-3 py-1">Arquitetura Limpa</span>
+          <span class="tag rounded-full px-3 py-1">Kotlin & Spring</span>
+          <span class="tag rounded-full px-3 py-1">Observabilidade</span>
+          <span class="tag rounded-full px-3 py-1">Plano de Carreira</span>
+        </div>
+      </div>
+      <div class="glass rounded-2xl p-8">
+        <h3 class="text-xl font-semibold mb-4" style="font-family:Poppins,system-ui">O que você leva</h3>
+        <ul class="space-y-3 text-[color:var(--ink-2)]">
+          <li>• Diagnóstico rápido do momento atual</li>
+          <li>• Roteiro prático de próximos passos (1–4 semanas)</li>
+          <li>• Referências e materiais para estudo/portfólio</li>
+          <li>• Follow-up curto com 2 checkpoints por e-mail</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="py-20">
+    <div class="mx-auto max-w-6xl px-6 grid lg:grid-cols-3 gap-6">
+      <div class="glass rounded-2xl p-8">
+        <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Formato</h3>
+        <p class="text-[color:var(--ink-2)]">Encontro individual, online (Google Meet/Zoom), 45–60 minutos. Conversa objetiva e humana, com profundidade técnica.</p>
+      </div>
+      <div class="glass rounded-2xl p-8">
+        <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Roteiro</h3>
+        <p class="text-[color:var(--ink-2)]">Objetivo → diagnóstico → plano de ação → próximos passos com datas. Você sai sabendo exatamente o que fazer.</p>
+      </div>
+      <div class="glass rounded-2xl p-8">
+        <h3 class="text-lg font-semibold mb-2" style="font-family:Poppins,system-ui">Investimento</h3>
+        <p class="text-[color:var(--ink-2)]">Valor simbólico de um café ☕ via Pix. Após o pagamento, enviamos/confirmamos o agendamento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMAS -->
+  <section id="temas" class="py-6 pb-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6" style="font-family:Poppins,system-ui">Temas frequentes</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-6">
+          <h4 class="font-semibold mb-2">Arquitetura & Boas Práticas</h4>
+          <p class="text-[color:var(--ink-2)]">Clean/Hexagonal, padrões, testes, refatoração e design evolutivo.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h4 class="font-semibold mb-2">Backend</h4>
+          <p class="text-[color:var(--ink-2)]">Kotlin, Spring Boot, microservices, observabilidade e pipelines.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h4 class="font-semibold mb-2">Carreira & Portfólio</h4>
+          <p class="text-[color:var(--ink-2)]">LinkedIn, GitHub, talks, storytelling técnico e networking.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h4 class="font-semibold mb-2">Estudos & Certificações</h4>
+          <p class="text-[color:var(--ink-2)]">Planos semanais, foco, materiais e métricas de progresso.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h4 class="font-semibold mb-2">Próximo passo na empresa</h4>
+          <p class="text-[color:var(--ink-2)]">Promoção, impacto, visibilidade e alinhamento com liderança.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h4 class="font-semibold mb-2">Transição com segurança</h4>
+          <p class="text-[color:var(--ink-2)]">Da base técnica ao posicionamento, sem perder a essência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIX / AGENDAMENTO -->
+  <section id="pix" class="py-20">
+    <div class="mx-auto max-w-4xl px-6 glass rounded-2xl p-8">
+      <div class="md:flex md:items-center md:justify-between gap-8">
+        <div class="md:w-2/3">
+          <h2 class="text-2xl md:text-3xl font-bold mb-2" style="font-family:Poppins,system-ui">Como agendar seu café</h2>
+          <ol class="list-decimal list-inside space-y-3 text-[color:var(--ink-2)]">
+            <li>Envie o valor simbólico de <strong>R$ 25,00</strong> via <strong>Pix</strong> para a chave abaixo.</li>
+            <li>Envie o <strong>comprovante</strong> e o <strong>tema</strong> que você quer conversar por e‑mail.</li>
+            <li>Você receberá o link para escolher o horário da sessão.</li>
+          </ol>
+          <div class="mt-6 p-4 rounded-xl border" style="border-color:var(--line)">
+            <p class="text-sm text-[color:var(--ink-2)] mb-2">Chave Pix (e‑mail)</p>
+            <div class="flex items-center gap-3">
+              <code id="pixKey" class="text-sm break-all">jackeline_nascimento@hotmail.com</code>
+              <button id="copyBtn" class="btn-outline rounded-full px-3 py-1 text-sm">Copiar</button>
+            </div>
+            <p id="copyToast" class="opacity-0 transition-opacity text-xs mt-2 text-emerald-300">Chave copiada! ✅</p>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="btn-primary glow rounded-full px-5 py-3 font-medium" href="mailto:jackeline_nascimento@hotmail.com?subject=Comprovante%20Pix%20-%20Mentoria%20com%20Caf%C3%A9&body=Oi%20Jackie!%0D%0A%0D%0AEnviei%20o%20Pix%20de%20R$%2025,00.%20Segue%20o%20meu%20tema%20para%20a%20mentoria:%20_____">Enviar comprovante por e‑mail</a>
+            <!-- Para usar WhatsApp, substitua SEUNUMERO pelo DDI+DDD+número, ex: 5598987654321 -->
+            <!-- <a class="btn-outline rounded-full px-5 py-3 font-medium" href="https://wa.me/55SEUNUMERO?text=Oi%20Jackie!%20Enviei%20o%20Pix%20de%20R$%2025,00%20para%20a%20mentoria%20e%20meu%20tema%20%C3%A9%3A%20_____">Enviar comprovante no WhatsApp</a> -->
+          </div>
+          <p class="mt-4 text-xs text-[color:var(--ink-2)]">Remarcações até 12h antes. Pagamento antecipado. Política de privacidade sob consulta.</p>
+        </div>
+        <div class="md:w-1/3 mt-10 md:mt-0">
+          <div class="rounded-2xl border aspect-square flex items-center justify-center text-center p-6" style="border-color:var(--line)">
+            <div>
+              <div class="text-sm text-[color:var(--ink-2)] mb-2">QR Code (opcional)</div>
+              <p class="text-xs text-[color:var(--ink-2)]">Se desejar, posso gerar um QR Pix estático. Por ora, use o botão <em>Copiar</em> para a chave.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20">
+    <div class="mx-auto max-w-6xl px-6 grid lg:grid-cols-3 gap-8 items-start">
+      <div class="lg:col-span-2">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4" style="font-family:Poppins,system-ui">Sobre a Jackie</h2>
+        <p class="text-[color:var(--ink-2)] leading-relaxed">
+          Engenheira de Software (Backend) — Kotlin, Spring Boot e AWS — com foco em arquitetura limpa, microserviços e observabilidade.
+          Vinda da matemática, hoje mentoro pessoas que querem dar o próximo passo na carreira técnica com segurança, clareza e propósito.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="btn-outline rounded-full px-5 py-2" href="https://www.linkedin.com/in/jackelinenascimento" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn-outline rounded-full px-5 py-2" href="https://github.com/jackelinenascimento" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-outline rounded-full px-5 py-2" href="https://www.instagram.com/jackienascimento_" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <aside class="glass rounded-2xl p-6">
+        <h3 class="font-semibold mb-3" style="font-family:Poppins,system-ui">FAQ rápido</h3>
+        <ul class="space-y-3 text-[color:var(--ink-2)] text-sm">
+          <li><strong>Como agendo?</strong> Após o Pix, envio um link para escolher o horário.</li>
+          <li><strong>Comprovante por onde?</strong> Preferencialmente por e‑mail.</li>
+          <li><strong>Não posso no dia?</strong> Remarque até 12h antes, sem custo.</li>
+          <li><strong>Tema livre?</strong> Foco em tech/carreira, mas olhamos o todo.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-20">
+    <div class="mx-auto max-w-6xl px-6 glass rounded-2xl p-10 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold" style="font-family:Poppins,system-ui">Pronta(o) para o próximo passo?</h2>
+      <p class="mt-3 text-[color:var(--ink-2)]">Bora tomar um café e construir seu plano com clareza e técnica.</p>
+      <a href="#pix" class="mt-6 inline-block btn-primary glow rounded-full px-8 py-3 font-medium">Agendar meu café</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-sm text-[color:var(--ink-2)]">
+    <p>© <span id="y"></span> Mentoria com Café • por Jackie Nascimento</p>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>
