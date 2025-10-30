@@ -11,3 +11,33 @@ btn.addEventListener('click', async () => {
     alert('Não foi possível copiar. Selecione e copie manualmente.');
   }
 });
+
+// Accordion simples e acessível para o FAQ
+document.querySelectorAll('.faq-item').forEach((item) => {
+  const btn = item.querySelector('.faq-q');
+  const panel = item.querySelector('.faq-a');
+
+  // Estado inicial
+  btn.setAttribute('aria-expanded', 'false');
+  if (panel) panel.setAttribute('hidden', '');
+
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+    if (panel) {
+      if (isOpen) {
+        panel.removeAttribute('hidden');
+      } else {
+        panel.setAttribute('hidden', '');
+      }
+    }
+  });
+
+  // Acessibilidade: toggle com Enter/Espaço quando focado
+  btn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      btn.click();
+    }
+  });
+});
