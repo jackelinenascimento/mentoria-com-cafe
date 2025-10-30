@@ -11,13 +11,3 @@ btn.addEventListener('click', async () => {
     alert('Não foi possível copiar. Selecione e copie manualmente.');
   }
 });
-
-// QR PIX placeholder (gera imagem se disponível)
-const qrContainer = document.getElementById('qrPix');
-if (qrContainer) {
-  const img = document.createElement('img');
-  img.src = 'assets/qrpix.png';
-  img.alt = 'QR Code Pix';
-  img.className = 'mx-auto rounded-xl border border-[color:var(--line)]';
-  qrContainer.appendChild(img);
-}
