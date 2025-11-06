@@ -16,7 +16,6 @@ document.querySelectorAll('.faq-item').forEach((item) => {
   const btn = item.querySelector('.faq-q');
   const panel = item.querySelector('.faq-a');
 
-  // Estado inicial
   btn.setAttribute('aria-expanded', 'false');
   if (panel) panel.setAttribute('hidden', '');
 
