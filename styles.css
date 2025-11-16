@@ -15,6 +15,10 @@ body {
   color: var(--ink);
 }
 
+.font-heading {
+  font-family: 'Poppins', system-ui;
+}
+
 section { padding-top: 3rem; padding-bottom: 3rem; }
 @media (max-width: 768px) {
   section { padding-top: 2rem; padding-bottom: 2rem; }

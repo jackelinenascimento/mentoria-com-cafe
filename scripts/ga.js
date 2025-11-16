@@ -49,10 +49,6 @@
       onClickSend(a, "whatsapp_click");
     });
 
-    document.querySelectorAll('a[href*="recargapay.com.br"]').forEach((a) => {
-      onClickSend(a, "pagamento_cartao_click");
-    });
-
     document.querySelectorAll('a[href^="mailto:"]').forEach((a) => {
       onClickSend(a, "email_click");
     });
@@ -69,12 +65,7 @@
       });
     });
 
-    const copyBtn = document.getElementById("copyBtn");
-    if (copyBtn) {
-      copyBtn.addEventListener("click", () => {
-        send("pix_copy", { method: "button" });
-      });
-    }
+    // Removido o rastreamento específico de pix_copy e pagamento_cartao_click.
 
     setTimeout(() => {
       send("engaged_45s");

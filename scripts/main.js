@@ -1,16 +1,4 @@
 document.getElementById('y').textContent = new Date().getFullYear();
-const btn = document.getElementById('copyBtn');
-const keyEl = document.getElementById('pixKey');
-const toast = document.getElementById('copyToast');
-btn.addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(keyEl.textContent.trim());
-    toast.classList.remove('opacity-0');
-    setTimeout(()=>toast.classList.add('opacity-0'), 1800);
-  } catch (e) {
-    alert('Não foi possível copiar. Selecione e copie manualmente.');
-  }
-});
 
 document.querySelectorAll('.faq-item').forEach((item) => {
   const btn = item.querySelector('.faq-q');
@@ -20,6 +8,14 @@ document.querySelectorAll('.faq-item').forEach((item) => {
   if (panel) panel.setAttribute('hidden', '');
 
   btn.addEventListener('click', () => {
+    document.querySelectorAll('.faq-item.open').forEach(openItem => {
+        if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+            openItem.querySelector('.faq-a').setAttribute('hidden', '');
+        }
+    });
+
     const isOpen = item.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(isOpen));
     if (panel) {
