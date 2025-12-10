@@ -28,14 +28,14 @@ A mentoria é um espaço acolhedor e direto, com conversas técnicas que destrav
 
 ## 🧭 Como funciona
 
-1. **Faça o Pix** — Valor simbólico a partir de **R$ 40,00** para a chave:
+1. **Faça o Pix** — Valor simbólico a partir de **R$ 50,00** para a chave:
 
    ```
    jackeline_nascimento@hotmail.com
    ```
 2. **Envie o comprovante no WhatsApp** 📱 com o assunto da mentoria e um breve histórico:
    [Enviar mensagem no WhatsApp](https://wa.me/5511984853856?text=Oi%20Jackie!%20Enviei%20o%20Pix%20%28a%20partir%20de%20R%24%2040%2C00%29.%20Assunto%3A%20_____.%20Breve%20hist%C3%B3rico%3A%20_____.).
-3. **Agende sua mentoria** — Jackie retornará com o link para escolher o horário (sessão de até **50 minutos**).
+3. **Agende sua mentoria** — Jackie retornará com o link para escolher o horário (sessão de até **1h30**).
 
 ---
 
