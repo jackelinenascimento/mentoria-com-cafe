@@ -27,7 +27,8 @@ Oi Jackie! Quero agendar minha Mentoria com Café. Meu objetivo é: ____. Meu mo
 mentoria-com-cafe
 ├── index.html
 ├── styles.css
-├── SPEC.md
+├── docs
+│   ├── SPEC.md
 ├── scripts
 │   ├── ga.js
 │   └── main.js
