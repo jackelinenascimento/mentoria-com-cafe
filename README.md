@@ -1,70 +1,78 @@
-# mentoria-com-cafe
-Landing page da Mentoria com Café ☕ — por Jackeline Nascimento
-# ☕ Mentoria com Café — por Jackie Nascimento
+# Mentoria com Café
 
-Uma iniciativa de mentoria 1:1 voltada para pessoas em **transição de carreira**, **evolução de estagiário e júnior**, e profissionais que desejam fortalecer sua trajetória no **backend** com propósito e clareza.
+Landing page da Mentoria com Café, por Jackie Nascimento.
 
----
+## Sobre o projeto
 
-## 🌟 Sobre o projeto
+Uma página estática para divulgar e converter interessados em mentoria 1:1 para carreira em tecnologia, transição de carreira, primeiro emprego, backend, portfólio, LinkedIn e entrevistas técnicas.
 
-Landing page criada para divulgar e organizar as mentorias individuais com a Jackie Nascimento — engenheira de software backend especializada em Kotlin, Spring Boot e AWS, com foco em arquitetura limpa e observabilidade.
+A mentoria tem uma sessão online de até 1h30, investimento a partir de **R$ 70,00** e entrega um **PDF consolidado** com diagnóstico, prioridades e plano de ação.
 
-A mentoria é um espaço acolhedor e direto, com conversas técnicas que destravam dúvidas e ajudam a construir planos de ação reais.
+## Fluxo de agendamento
 
----
+1. A pessoa chama a Jackie pelo WhatsApp e informa objetivo, momento atual e principal dúvida.
+2. Jackie envia a agenda e o formulário de alinhamento.
+3. A pessoa escolhe o horário e confirma a reserva com pagamento via Pix ou cartão.
+4. Após a sessão, recebe o PDF consolidado com próximos passos.
 
-## 💻 Estrutura do projeto
+Mensagem principal de WhatsApp:
 
-```
-📦 mentoria-com-cafe
-├── index.html         # Página principal (HTML)
-├── styles.css         # Estilos visuais (CSS, Tailwind base)
-├── script.js          # Lógica de interação (copiar Pix, feedback visual)
-└── README.md          # Este arquivo
+```text
+Oi Jackie! Quero agendar minha Mentoria com Café. Meu objetivo é: ____. Meu momento atual é: transição / primeiro emprego / backend / entrevistas. Pode me enviar a agenda e o formulário de alinhamento?
 ```
 
----
+## Estrutura do projeto
 
-## 🧭 Como funciona
+```text
+mentoria-com-cafe
+├── index.html
+├── styles.css
+├── SPEC.md
+├── scripts
+│   ├── ga.js
+│   └── main.js
+└── assets
+    ├── jackie.jpg
+    └── whatsapp-logo.svg
+```
 
-1. **Faça o Pix** — Valor simbólico a partir de **R$ 50,00** para a chave:
+## Seções da página
 
-   ```
-   jackeline_nascimento@hotmail.com
-   ```
-2. **Envie o comprovante no WhatsApp** 📱 com o assunto da mentoria e um breve histórico:
-   [Enviar mensagem no WhatsApp](https://wa.me/5511984853856?text=Oi%20Jackie!%20Enviei%20o%20Pix%20%28a%20partir%20de%20R%24%2040%2C00%29.%20Assunto%3A%20_____.%20Breve%20hist%C3%B3rico%3A%20_____.).
-3. **Agende sua mentoria** — Jackie retornará com o link para escolher o horário (sessão de até **1h30**).
+- Hero com CTA direto para WhatsApp.
+- Sobre a Jackie perto do topo para reforçar confiança.
+- Como funciona em 4 etapas.
+- Destaque do PDF consolidado.
+- Para quem é e para quem talvez não seja.
+- Temas frequentes.
+- Feedbacks em formato Dor / Trabalho feito / Resultado.
+- Agendamento com microcopy de segurança.
+- FAQ com dúvidas de preço, pagamento, Pix, suporte e remarcação.
+- CTA final e botão flutuante de WhatsApp.
 
----
+## Mensuração
 
-## 🧩 Temas frequentes
+O projeto usa Google Analytics via `scripts/ga.js` para acompanhar:
 
-* Transição de Carreira com segurança
-* Evolução de Estagiário → Júnior → Pleno 
-* Backend no mercado de trabalho (Kotlin, Spring Boot, Observabilidade)
-* Entrevistas Técnicas e Storytelling
-* Arquitetura & Boas Práticas
-* Portfólio, LinkedIn e Plano de Carreira
+- Cliques em CTAs internos.
+- Cliques no WhatsApp.
+- Cliques em e-mail.
+- Cliques em redes sociais.
+- Abertura de perguntas do FAQ.
+- Visualização das seções `para-quem`, `feedbacks`, `agendamento` e `faq`.
+- Evento de engajamento após 45 segundos.
 
----
+## Tecnologias
 
-## 🧠 Tecnologias utilizadas
+- HTML5
+- CSS3
+- Tailwind via CDN
+- JavaScript Vanilla
+- Google Analytics
+- GitHub Pages
 
-* **HTML5 + CSS3 (Tailwind base)**
-* **JavaScript Vanilla**
-* **GitHub Pages** para hospedagem gratuita
+## Contato
 
----
-
-## 📫 Contato
-
-* 💌 E-mail: [jackeline_nascimento@hotmail.com](mailto:jackeline_nascimento@hotmail.com)
-* 💼 [LinkedIn](https://www.linkedin.com/in/jackelinenascimento)
-* 💻 [GitHub](https://github.com/jackelinenascimento)
-* 📸 [Instagram](https://www.instagram.com/jackienascimento_)
-
----
-
-> “Mentoria com Café é um convite para desacelerar, conversar e alinhar técnica com propósito.” ☕
+- E-mail: [jackeline_nascimento@hotmail.com](mailto:jackeline_nascimento@hotmail.com)
+- LinkedIn: [jackelinenascimento](https://www.linkedin.com/in/jackelinenascimento)
+- GitHub: [jackelinenascimento](https://github.com/jackelinenascimento)
+- Instagram: [@jackienascimento_](https://www.instagram.com/jackienascimento_)

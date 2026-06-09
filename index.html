@@ -3,380 +3,509 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentoria com Café — por Jackie Nascimento</title>
-  <meta name="description" content="Mentoria 1:1 com foco em backend, arquitetura e carreira em tecnologia. Sessões diretas, acolhedoras e técnicas com plano de ação claro." />
+  <title>Mentoria com Café - por Jackie Nascimento</title>
+  <meta name="description" content="Mentoria 1:1 para carreira em tecnologia, backend, portfólio, LinkedIn e entrevistas. Saia com diagnóstico, prioridades e plano de ação claro." />
+  <meta name="theme-color" content="#0B0F1A" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mentoria com Café - por Jackie Nascimento" />
+  <meta property="og:description" content="Uma sessão 1:1 para organizar seu momento em tech e sair com próximos passos claros." />
+  <meta property="og:image" content="./assets/jackie.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mentoria com Café - por Jackie Nascimento" />
+  <meta name="twitter:description" content="Mentoria 1:1 para carreira, backend, portfólio, LinkedIn e entrevistas." />
+  <meta name="twitter:image" content="./assets/jackie.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mentoria com Café",
+      "description": "Mentoria 1:1 para carreira em tecnologia, backend, portfólio, LinkedIn e entrevistas.",
+      "provider": {
+        "@type": "Person",
+        "name": "Jackie Nascimento",
+        "jobTitle": "Engenheira de Software Backend",
+        "url": "https://www.linkedin.com/in/jackelinenascimento",
+        "sameAs": [
+          "https://www.linkedin.com/in/jackelinenascimento",
+          "https://github.com/jackelinenascimento",
+          "https://www.instagram.com/jackienascimento_"
+        ]
+      },
+      "areaServed": "BR",
+      "serviceType": "Mentoria de carreira e tecnologia",
+      "offers": {
+        "@type": "Offer",
+        "price": "70.00",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ940H74GR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MZ940H74GR');
-  </script> 
+  </script>
 </head>
 <body class="antialiased selection:bg-violet-500/30 selection:text-white">
-    
-   <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/0">
-       <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-           <a href="#top" class="flex items-center gap-2">
-               <span class="inline-block h-3 w-3 rounded-full" style="background:linear-gradient(135deg,var(--violet),var(--sky))"></span>
-               <span class="font-semibold tracking-wide font-heading">Mentoria com Café</span>
-           </a>
-           <nav class="hidden md:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
-               <a class="hover:text-white" href="#como-funciona">Como funciona</a>
-               <a class="hover:text-white" href="#temas">Temas</a>
-               <a class="hover:text-white" href="#sobre">Sobre</a>
-           </nav>
-           <a href="#agendamento" class="btn-primary glow rounded-full px-4 py-2 text-sm font-medium">Agendar meu café</a>
-       </div>
-   </header>
-   
-   <main>
-   <section id="top" class="relative">
-     <div class="mx-auto max-w-4xl px-6 pt-12 pb-10 flex flex-col items-center text-center gap-6">
-       <h1 class="text-4xl md:text-5xl font-bold leading-tight font-heading">
-         Mentoria com Café<br/>
-         <span class="text-transparent bg-clip-text" style="background-image:linear-gradient(135deg,var(--sky),var(--violet))">
-           clareza técnica, direção e próximos passos
-         </span>
-       </h1>
-       <p class="text-lg text-[color:var(--ink-2)] max-w-2xl">
-         Sessões 1:1 comigo, diretas e acolhedoras, para alinhar objetivos, ganhar clareza e sair com um plano de ação —
-         sem perder a profundidade técnica.
-       </p>
-       <div class="flex flex-wrap items-center justify-center gap-4">
-         <a href="#agendamento" class="btn-primary glow rounded-full px-6 py-3 font-medium">Agendar meu café</a>
-         <a href="#como-funciona" class="btn-outline rounded-full px-6 py-3 font-medium">Como funciona</a>
-       </div>
-       <div class="flex flex-wrap justify-center gap-2 text-xs text-[color:var(--ink-2)]">
-         <span class="tag rounded-full px-3 py-1">Transição de Carreira</span>
-         <span class="tag rounded-full px-3 py-1">Soft Skills vs Hard Skills</span>
-         <span class="tag rounded-full px-3 py-1">Evolução e Plano de Carreira</span>
-         <span class="tag rounded-full px-3 py-1">Primeiro Emprego em Tech</span>
-         <span class="tag rounded-full px-3 py-1">LinkedIn e Portfólio</span>
-         <span class="tag rounded-full px-3 py-1">Entrevistas Técnicas</span>
-         <span class="tag rounded-full px-3 py-1">Carreira Backend</span>
-         <span class="tag rounded-full px-3 py-1">Mentoria para Mulheres em Tech</span>
-       </div>
-     </div>
-   </section>
-   <section id="como-funciona">
-     <div class="mx-auto max-w-6xl px-6">
-       <header class="text-center mb-8">
-         <h2 class="text-2xl md:text-3xl font-bold font-heading">Como funciona</h2>
-         <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
-           O processo é rápido: você pré-reserva seu horário, faz o alinhamento e confirma com o pagamento para garantir a sessão 1:1.
-         </p>
-         <p class="text-sm md:text-base mt-3" style="color:var(--ink-2); line-height:1.6;">
-           <strong>1. Contato:</strong> Fale comigo que enviarei a agenda para você escolher o dia e o formulário de alinhamento.</p>
-         <p class="text-sm md:text-base mt-3" style="color:var(--ink-2); line-height:1.6;">
-           <strong>2. Pagamento:</strong> Após escolher o horário, você faz o pagamento (Pix/Cartão).</p>
-         <p class="text-sm md:text-base mt-3" style="color:var(--ink-2); line-height:1.6;">
-           <strong>3. Confirmação:</strong> Envie o comprovante para validar sua reserva.</p>
-         <p class="text-sm md:text-base mt-3 font-medium" style="color:var(--sky); line-height:1.6;">
-           <strong>Bônus:</strong> Após a sessão, você recebe um <strong>PDF consolidado</strong> com o resumo da conversa e o plano de ação que construímos juntos.
-         </p>
-       </header>
-       
-       <div class="grid lg:grid-cols-3 gap-6">
-         <div class="glass rounded-2xl p-8">
-           <h3 class="text-lg font-semibold mb-2 font-heading">Formato</h3>
-           <p class="text-[color:var(--ink-2)]">
-             Encontro individual, online (Google Meet/Zoom), com até <strong>1h30</strong>.
-             Conversa objetiva e acolhedora, com profundidade técnica.
-           </p>
-         </div>
-         <div class="glass rounded-2xl p-8">
-           <h3 class="text-lg font-semibold mb-2 font-heading">Roteiro</h3>
-           <p class="text-[color:var(--ink-2)]">
-             Objetivo → diagnóstico → plano de ação → próximos passos.<br>
-             Você sai com um caminho claro para seguir e um <strong>PDF consolidado</strong> do plano.
-           </p>
-         </div>
-         <div class="glass rounded-2xl p-8">
-           <h3 class="text-lg font-semibold mb-2 font-heading">Investimento</h3>
-           <p class="text-[color:var(--ink-2)]">
-             Valor simbólico <strong>a partir de R$ 50,00</strong>, via <strong>Pix ou cartão</strong>.<br>
-             O pagamento é feito após o agendamento para confirmar a reserva.
-           </p>
-         </div>
-       </div>
-     </div>
-   </section>
-     
-   <section id="temas" class="py-6">
-     <div class="mx-auto max-w-6xl px-6">
-       <header class="text-center mb-6">
-         <h2 class="text-2xl md:text-3xl font-bold font-heading">Temas frequentes</h2>
-         <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
-           Do zero ao próximo nível: transição, primeiros passos e carreira backend
-         </p>
-       </header>
-       
-       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-         <div class="glass rounded-2xl p-6">
-           <h4 class="font-semibold mb-2">Transição com segurança</h4>
-           <p class="text-[color:var(--ink-2)]">
-             Mapeamento de lacunas, plano de estudo e foco na prática para migrar com clareza.
-           </p>
-         </div>
-         <div class="glass rounded-2xl p-6">
-           <h4 class="font-semibold mb-2">Primeiro emprego em Tech</h4>
-           <p class="text-[color:var(--ink-2)]">
-             Portfólio mínimo viável, currículo enxuto e estratégia de vagas/abordagem.
-           </p>
-         </div>
-         <div class="glass rounded-2xl p-6">
-           <h4 class="font-semibold mb-2">Backend na prática</h4>
-           <p class="text-[color:var(--ink-2)]">
-             APIs REST, Kotlin/Spring Boot, testes, logs e observabilidade no dia a dia.
-           </p>
-         </div>
-         <div class="glass rounded-2xl p-6">
-           <h4 class="font-semibold mb-2">Arquitetura & Boas práticas</h4>
-           <p class="text-[color:var(--ink-2)]">
-             Clean/Hexagonal, refatoração incremental e decisões técnicas com trade-offs.
-           </p>
-         </div>
-         <div class="glass rounded-2xl p-6">
-           <h4 class="font-semibold mb-2">Entrevistas & processos</h4>
-           <p class="text-[color:var(--ink-2)]">
-             Estruturar respostas, live-coding, system design e storytelling técnico.
-           </p>
-         </div>
-         <div class="glass rounded-2xl p-6">
-           <h4 class="font-semibold mb-2">Visibilidade & carreira</h4>
-           <p class="text-[color:var(--ink-2)]">
-             LinkedIn, GitHub, talks, networking e plano de evolução estagiário → júnior → pleno.
-           </p>
-         </div>
-       </div>
-     </div>
-   </section>
+  <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/0">
+    <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-2 focus-ring">
+        <span class="inline-block h-3 w-3 rounded-full" style="background:linear-gradient(135deg,var(--violet),var(--sky))"></span>
+        <span class="font-semibold tracking-wide font-heading">Mentoria com Café</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
+        <a class="hover:text-white focus-ring" href="#como-funciona">Como funciona</a>
+        <a class="hover:text-white focus-ring" href="#para-quem">Para quem</a>
+        <a class="hover:text-white focus-ring" href="#feedbacks">Feedbacks</a>
+        <a class="hover:text-white focus-ring" href="#sobre">Sobre</a>
+        <a class="hover:text-white focus-ring" href="#faq">FAQ</a>
+      </nav>
+      <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
+        class="btn-primary glow rounded-full px-4 py-2 text-sm font-medium focus-ring"
+        target="_blank"
+        rel="noopener">
+        Agendar
+      </a>
+    </div>
+  </header>
 
-   <section id="feedbacks" class="py-12">
-    <div class="mx-auto max-w-6xl px-6">
-        <header class="text-center mb-10">
-            <h2 class="text-2xl md:text-3xl font-bold font-heading">Quem já fez a mentoria</h2>
-            <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
-                Veja o que os mentorados dizem sobre a clareza e o plano de ação construído.
+  <main>
+    <section id="top" class="relative">
+      <div class="mx-auto max-w-4xl px-6 pt-8 pb-8 flex flex-col items-center text-center gap-5">
+        <p class="eyebrow">Mentoria 1:1 para carreira em tecnologia</p>
+        <h1 class="text-4xl lg:text-5xl font-bold leading-tight font-heading">
+          Mentoria com Café<br/>
+          <span class="text-transparent bg-clip-text" style="background-image:linear-gradient(135deg,var(--sky),var(--violet))">
+            plano claro para carreira, portfólio ou backend
+          </span>
+        </h1>
+        <p class="text-lg text-[color:var(--ink-2)] max-w-2xl">
+          Uma sessão comigo para entender seu momento, diagnosticar lacunas e transformar dúvidas em prioridades práticas,
+          sem perder acolhimento nem profundidade técnica.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
+            class="btn-primary glow rounded-full px-6 py-3 font-medium focus-ring"
+            target="_blank"
+            rel="noopener">
+            Quero agendar pelo WhatsApp
+          </a>
+          <a href="#como-funciona" class="btn-outline rounded-full px-6 py-3 font-medium focus-ring">Ver como funciona</a>
+        </div>
+        <p class="text-sm text-[color:var(--ink-2)] max-w-xl">
+          Sem compromisso: me conte seu momento e eu te digo se a mentoria faz sentido para o que você precisa agora.
+        </p>
+        <div class="flex flex-wrap justify-center gap-2 text-xs text-[color:var(--ink-2)]">
+          <span class="tag rounded-full px-3 py-1">Transição de Carreira</span>
+          <span class="tag rounded-full px-3 py-1">Primeiro Emprego em Tech</span>
+          <span class="tag rounded-full px-3 py-1">LinkedIn e Portfólio</span>
+          <span class="tag rounded-full px-3 py-1">Entrevistas Técnicas</span>
+          <span class="tag rounded-full px-3 py-1">Carreira Backend</span>
+          <span class="tag rounded-full px-3 py-1">Mulheres em Tech</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="py-16">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="flex flex-col md:flex-row-reverse items-center md:items-center gap-6 md:gap-10">
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border border-[var(--line)] shadow-lg">
+            <img src="./assets/jackie.jpg" alt="Foto da Jackie Nascimento" class="w-full h-full object-cover">
+          </div>
+
+          <div class="text-left flex-1">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 font-heading">
+              Sobre a Jackie Nascimento
+            </h2>
+            <p class="text-[color:var(--ink-2)] leading-relaxed mb-3">
+              Sou Engenheira de Software Backend, especializada em <strong>Kotlin, Spring Boot e AWS</strong>, com experiência em arquitetura limpa, microsserviços e observabilidade de sistemas.
             </p>
+            <p class="text-[color:var(--ink-2)] leading-relaxed mb-3">
+              Antes de entrar na tecnologia, fui professora de matemática por mais de uma década. Hoje, uno didática e experiência técnica para ajudar pessoas em <strong>transição de carreira</strong> ou que desejam <strong>evoluir no backend</strong> com clareza, prática e propósito.
+            </p>
+            <p class="text-[color:var(--ink-2)] leading-relaxed">
+              Também sou criadora do <strong>Clube de Leitura Dev</strong>, um projeto onde lemos e discutimos livros técnicos sobre carreira, design de código e arquitetura de software.
+            </p>
+          </div>
+        </div>
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a class="btn-outline rounded-full px-5 py-2 focus-ring" href="https://www.linkedin.com/in/jackelinenascimento" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn-outline rounded-full px-5 py-2 focus-ring" href="https://github.com/jackelinenascimento" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-outline rounded-full px-5 py-2 focus-ring" href="https://www.instagram.com/jackienascimento_" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="mx-auto max-w-6xl px-6">
+        <header class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">Como funciona</h2>
+          <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+            Você entra em contato, escolhe o melhor horário, preenche um formulário de alinhamento e confirma a reserva com pagamento.
+          </p>
+        </header>
+
+        <div class="grid lg:grid-cols-4 gap-6">
+          <div class="glass rounded-2xl p-6">
+            <p class="step-number">1</p>
+            <h3 class="text-lg font-semibold mb-2 font-heading">Contato</h3>
+            <p class="text-[color:var(--ink-2)]">
+              Me chame no WhatsApp e conte seu objetivo, momento atual e principal dúvida.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <p class="step-number">2</p>
+            <h3 class="text-lg font-semibold mb-2 font-heading">Alinhamento</h3>
+            <p class="text-[color:var(--ink-2)]">
+              Envio a agenda e um formulário curto para preparar a sessão com foco.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <p class="step-number">3</p>
+            <h3 class="text-lg font-semibold mb-2 font-heading">Pagamento</h3>
+            <p class="text-[color:var(--ink-2)]">
+              Após escolher o horário, você confirma a reserva. O valor é <strong>a partir de R$ 70,00</strong>, via Pix ou cartão.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <p class="step-number">4</p>
+            <h3 class="text-lg font-semibold mb-2 font-heading">Sessão</h3>
+            <p class="text-[color:var(--ink-2)]">
+              Encontro online de até <strong>1h30</strong> com diagnóstico, prioridades e próximos passos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entregavel">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-6 items-stretch">
+          <div class="glass rounded-2xl p-8">
+            <p class="eyebrow">Entregável pós-sessão</p>
+            <h2 class="text-2xl md:text-3xl font-bold mb-3 font-heading">Você recebe um PDF consolidado</h2>
+            <p class="text-[color:var(--ink-2)] leading-relaxed">
+              Depois da conversa, envio um resumo organizado do que construímos: diagnóstico do momento,
+              prioridades, recomendações e um plano de ação para você continuar sem depender da memória da reunião.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-8">
+            <h3 class="text-lg font-semibold mb-4 font-heading">O que vai no documento</h3>
+            <ul class="space-y-3 text-[color:var(--ink-2)]">
+              <li><strong>Diagnóstico:</strong> onde você está e quais lacunas merecem atenção.</li>
+              <li><strong>Prioridades:</strong> o que fazer primeiro, sem tentar abraçar tudo de uma vez.</li>
+              <li><strong>Plano:</strong> próximos passos, referências e ações práticas combinadas na sessão.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="para-quem">
+      <div class="mx-auto max-w-6xl px-6">
+        <header class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">Para quem é</h2>
+          <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+            A mentoria funciona melhor quando existe uma dúvida real para organizar e transformar em ação.
+          </p>
+        </header>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="glass rounded-2xl p-8">
+            <h3 class="text-lg font-semibold mb-4 font-heading">Faz sentido se você quer</h3>
+            <ul class="space-y-3 text-[color:var(--ink-2)]">
+              <li>Entrar em tecnologia com um plano mais realista.</li>
+              <li>Organizar LinkedIn, currículo, GitHub ou portfólio.</li>
+              <li>Entender lacunas para primeira vaga, estágio ou júnior.</li>
+              <li>Ganhar clareza sobre backend, Kotlin, Java, Spring ou arquitetura.</li>
+              <li>Preparar melhor entrevistas técnicas e conversas de carreira.</li>
+            </ul>
+          </div>
+          <div class="glass rounded-2xl p-8">
+            <h3 class="text-lg font-semibold mb-4 font-heading">Talvez não seja o melhor formato se você busca</h3>
+            <ul class="space-y-3 text-[color:var(--ink-2)]">
+              <li>Um curso completo com aulas gravadas e trilha longa.</li>
+              <li>Garantia de vaga, indicação ou aprovação em processo seletivo.</li>
+              <li>Execução de projeto, currículo ou LinkedIn feita por outra pessoa.</li>
+              <li>Suporte diário ou acompanhamento contínuo fora do combinado.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="temas" class="py-6">
+      <div class="mx-auto max-w-6xl px-6">
+        <header class="text-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">Temas frequentes</h2>
+          <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+            Do zero ao próximo nível: transição, primeiros passos e carreira backend
+          </p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="glass rounded-2xl p-6">
+            <h4 class="font-semibold mb-2">Transição com segurança</h4>
+            <p class="text-[color:var(--ink-2)]">
+              Mapeamento de lacunas, plano de estudo e foco na prática para migrar com clareza.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <h4 class="font-semibold mb-2">Primeiro emprego em Tech</h4>
+            <p class="text-[color:var(--ink-2)]">
+              Portfólio mínimo viável, currículo enxuto e estratégia de vagas/abordagem.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <h4 class="font-semibold mb-2">Backend na prática</h4>
+            <p class="text-[color:var(--ink-2)]">
+              APIs REST, Kotlin/Spring Boot, testes, logs e observabilidade no dia a dia.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <h4 class="font-semibold mb-2">Arquitetura & Boas práticas</h4>
+            <p class="text-[color:var(--ink-2)]">
+              Clean/Hexagonal, refatoração incremental e decisões técnicas com trade-offs.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <h4 class="font-semibold mb-2">Entrevistas & processos</h4>
+            <p class="text-[color:var(--ink-2)]">
+              Estruturar respostas, live-coding, system design e storytelling técnico.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <h4 class="font-semibold mb-2">Visibilidade & carreira</h4>
+            <p class="text-[color:var(--ink-2)]">
+              LinkedIn, GitHub, networking e plano de evolução estagiário -> júnior -> pleno.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedbacks" class="py-12">
+      <div class="mx-auto max-w-6xl px-6">
+        <header class="text-center mb-10">
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">Quem já fez a mentoria</h2>
+          <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+            Relatos com contexto para você entender o tipo de destravamento que acontece na sessão.
+          </p>
         </header>
 
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="glass rounded-2xl p-6 border-l-4" style="border-color:var(--sky)">
-                <p class="italic text-base mb-4 text-[color:var(--ink-2)]">
-                    "Eu me sentia <strong>perdido em como migrar de carreira</strong>. A Jackie não só me deu clareza sobre o que faltava no meu perfil do Linkedin, mas me ajudou a montar o esqueleto do meu primeiro projeto Backend. Agora me sinto mais confiante."
-                </p>
-                <p class="font-semibold text-sm text-white">— Antonio M.</p>
-                <p class="text-xs text-[color:var(--ink-2)]">Em Transição de Carreira</p>
-            </div>
-            
-            <div class="glass rounded-2xl p-6 border-l-4" style="border-color:var(--violet)">
-                <p class="italic text-base mb-4 text-[color:var(--ink-2)]">
-                    "Eu estava aplicando para vagas sem uma <strong>estratégia</strong>. A sessão com a Jackie foi um essencial para ajustar meu <strong>pitch</strong> e quais <strong>skills</strong> realmente importam nas entrevistas técnicas para o nível que eu busco."
-                </p>
-                <p class="font-semibold text-sm text-white">— Joice G.</p>
-                <p class="text-xs text-[color:var(--ink-2)]">Engenheira de Software</p>
-            </div>
+          <div class="glass rounded-2xl p-6 border-l-4 feedback-card" style="border-color:var(--sky)">
+            <p class="feedback-label">Dor</p>
+            <p class="text-[color:var(--ink-2)] mb-4">Migração de carreira sem clareza do que faltava priorizar.</p>
+            <p class="feedback-label">Trabalho feito</p>
+            <p class="italic text-base mb-4 text-[color:var(--ink-2)]">
+              "A Jackie me deu clareza sobre o LinkedIn e me ajudou a montar o esqueleto do meu primeiro projeto Backend."
+            </p>
+            <p class="feedback-label">Resultado</p>
+            <p class="text-[color:var(--ink-2)] mb-4">Mais confiança e um caminho prático para seguir.</p>
+            <p class="font-semibold text-sm text-white">Antonio M.</p>
+            <p class="text-xs text-[color:var(--ink-2)]">Em transição de carreira</p>
+          </div>
 
-            <div class="glass rounded-2xl p-6 border-l-4" style="border-color:var(--sky)">
-                <p class="italic text-base mb-4 text-[color:var(--ink-2)]">
-                    "Eu tinha a teoria da faculdade e pós, mas a pergunta era: <strong>'o que colocar no portfólio?'</strong>. A Jackie me ajudou a pensar como meus trabalhos e ideias de projetos podem ser usados na minha busca pela primeira oportunidade na área tech."
-                </p>
-                <p class="font-semibold text-sm text-white">— Marilia S.</p>
-                <p class="text-xs text-[color:var(--ink-2)]">Buscando o Primeiro Emprego Tech</p>
-            </div>
+          <div class="glass rounded-2xl p-6 border-l-4 feedback-card" style="border-color:var(--violet)">
+            <p class="feedback-label">Dor</p>
+            <p class="text-[color:var(--ink-2)] mb-4">Aplicações para vagas sem estratégia clara.</p>
+            <p class="feedback-label">Trabalho feito</p>
+            <p class="italic text-base mb-4 text-[color:var(--ink-2)]">
+              "A sessão foi essencial para ajustar meu pitch e entender quais skills importam nas entrevistas técnicas."
+            </p>
+            <p class="feedback-label">Resultado</p>
+            <p class="text-[color:var(--ink-2)] mb-4">Mais foco no posicionamento e nas conversas de processo seletivo.</p>
+            <p class="font-semibold text-sm text-white">Joice G.</p>
+            <p class="text-xs text-[color:var(--ink-2)]">Engenheira de Software</p>
+          </div>
+
+          <div class="glass rounded-2xl p-6 border-l-4 feedback-card" style="border-color:var(--sky)">
+            <p class="feedback-label">Dor</p>
+            <p class="text-[color:var(--ink-2)] mb-4">Dúvida sobre o que colocar no portfólio.</p>
+            <p class="feedback-label">Trabalho feito</p>
+            <p class="italic text-base mb-4 text-[color:var(--ink-2)]">
+              "A Jackie me ajudou a pensar como meus trabalhos e ideias de projetos podem apoiar minha busca pela primeira oportunidade."
+            </p>
+            <p class="feedback-label">Resultado</p>
+            <p class="text-[color:var(--ink-2)] mb-4">Ideias mais concretas para mostrar prática e intenção profissional.</p>
+            <p class="font-semibold text-sm text-white">Marilia S.</p>
+            <p class="text-xs text-[color:var(--ink-2)]">Buscando o primeiro emprego tech</p>
+          </div>
         </div>
-    </div>
-</section>
-
-   <section id="agendamento">
-     <div class="mx-auto max-w-3xl px-6 glass rounded-2xl p-8 text-center">
-       <h2 class="text-2xl md:text-3xl font-bold mb-2 font-heading">
-         Reserve seu Horário & Confirme seu Café
-       </h2>
-       <ol class="list-decimal list-inside space-y-3 text-[color:var(--ink-2)] max-w-xl mx-auto mt-2 text-left">
-         <li>
-          <strong>Fale comigo:</strong> Enviarei a agenda para você escolher o dia/horário e o formulário de alinhamento.
-         </li>
-         <li>
-          <strong>Faça o pagamento:</strong> Você receberá as opções (Pix/Cartão) para fazer o pagamento a partir de <strong>R$ 50,00</strong>.
-         </li>
-         <li>
-          <strong>Confirme a reserva:</strong> Envie o comprovante pelo WhatsApp ou e-mail para validar o agendamento.
-         </li>
-        </ol>
-       
-      <div class="mt-6 flex flex-wrap justify-center gap-3">
-         <a class="btn-primary glow rounded-full px-5 py-3 font-medium"
-         href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Gostaria%20de%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9%20e%20saber%20mais%20sobre%20o%20pagamento."
-         target="_blank" rel="noopener">
-           Quero Agendar (Fale no WhatsApp)
-         </a>
       </div>
-      <p class="mt-4 text-sm font-medium" style="color:var(--ink-2)">
-        Tem dúvidas? <a class="text-violet-400 hover:underline" href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20falar%20com%20você%20diretamente%20sobre%20a%20Mentoria%20com%20Café." target="_blank">Fale comigo diretamente!</a>
-      </p>
+    </section>
 
-     <p class="mt-4 text-xs text-[color:var(--ink-2)] max-w-xl mx-auto">
-       Remarcações até 12h antes. Pagamento antecipado. Política de privacidade sob consulta.
-     </p>
-   </section>
-   
-   <section id="sobre" class="py-20">
-     <div class="mx-auto max-w-4xl px-6">
-       <div class="flex flex-col md:flex-row-reverse items-center md:items-center gap-6 md:gap-10">
-         <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border border-[var(--line)] shadow-lg">
-           <img src="./assets/jackie.jpg" alt="Foto da Jackie Nascimento" class="w-full h-full object-cover">
-         </div>
-         
-         <div class="text-left flex-1">
-           <h2 class="text-2xl md:text-3xl font-bold mb-4 font-heading">
-             Sobre a Jackie Nascimento
-           </h2>
-           <p class="text-[color:var(--ink-2)] leading-relaxed mb-3">
-             Sou Engenheira de Software Backend, especializada em <strong>Kotlin, Spring Boot e AWS</strong>, com experiência em arquitetura limpa, microsserviços e observabilidade de sistemas.
-           </p>
-           <p class="text-[color:var(--ink-2)] leading-relaxed mb-3">
-             Antes de entrar na tecnologia, fui professora de matemática por mais de uma década. Hoje, uno didática e experiência técnica para ajudar pessoas em <strong>transição de carreira</strong> ou que desejam <strong>evoluir no backend</strong> — com clareza, prática e propósito.
-           </p>
-           <p class="text-[color:var(--ink-2)] leading-relaxed">
-             Também sou criadora do <strong>Clube de Leitura Dev</strong>, um projeto onde lemos e discutimos livros técnicos sobre carreira, design de código e arquitetura de software — criando espaço para aprender e crescer em grupo.
-           </p>
-         </div>
-       </div>
-       <div class="mt-6 flex flex-wrap justify-center gap-3">
-         <a class="btn-outline rounded-full px-5 py-2" href="https://www.linkedin.com/in/jackelinenascimento" target="_blank">LinkedIn</a>
-         <a class="btn-outline rounded-full px-5 py-2" href="https://github.com/jackelinenascimento" target="_blank">GitHub</a>
-         <a class="btn-outline rounded-full px-5 py-2" href="https://www.instagram.com/jackienascimento_" target="_blank">Instagram</a>
-       </div>
-     </div>
-   </section>
-   <section id="faq">
-     <div class="mx-auto max-w-6xl px-6">
-       <header class="text-center mb-6">
-         <h2 class="text-2xl md:text-3xl font-bold font-heading">FAQ rápido</h2>
-         <p class="mt-2 text-sm md:text-base prose-muted">
-           Dúvidas comuns sobre a mentoria, agendamento e pagamentos
-         </p>
-       </header>
-       
-       <div class="faq">
-         <ul class="faq-list">
-           <li class="faq-item">
-             <button class="faq-q" aria-expanded="false">
-               <span>Como faço para agendar?</span>
-               <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-             </button>
-             <div class="faq-a" hidden>
-               <div>
-                 Você entra em contato pelo WhatsApp. Eu enviarei a agenda para você escolher o melhor dia e horário e o formulário de alinhamento. Depois, você envia o comprovante de pagamento para confirmar a sessão (1h30).
-               </div>
-             </div>
-           </li>
-           <li class="faq-item">
-             <button class="faq-q" aria-expanded="false">
-               <span>Posso pagar no cartão?</span>
-               <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-             </button>
-             <div class="faq-a" hidden>
-               <div>
-                 Sim! Além do Pix, você pode pagar com cartão de crédito pelo link da cobrança segura. O valor simbólico é o mesmo. As opções são enviadas após o contato inicial.
-               </div>
-             </div>
-           </li>
-           <li class="faq-item">
-             <button class="faq-q" aria-expanded="false">
-               <span>Para onde envio o comprovante?</span>
-               <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-             </button>
-             <div class="faq-a" hidden>
-               <div>
-                 De preferência pelo WhatsApp 
-                 <a class="text-violet-400 hover:underline" href="https://wa.me/5511984853856" target="_blank">+55 11 98485-3856</a>.  
-                 Se preferir, pode enviar por e-mail: 
-                 <a class="text-violet-400 hover:underline" href="mailto:jackeline_nascimento@hotmail.com">jackeline_nascimento@hotmail.com</a>.
-               </div>
-             </div>
-           </li>
-           <li class="faq-item">
-             <button class="faq-q" aria-expanded="false">
-               <span>Qual é a chave Pix?</span>
-               <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-             </button>
-             <div class="faq-a" hidden>
-               <div>
-                 A chave Pix é o e-mail: <code>jackeline_nascimento@hotmail.com</code>. Esta informação será enviada após o contato para agendamento.
-               </div>
-             </div>
-           </li>
-           <li class="faq-item">
-             <button class="faq-q" aria-expanded="false">
-               <span>Quem é o público ideal?</span>
-               <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-             </button>
-             <div class="faq-a" hidden>
-               <div>
-                 Pessoas em transição de carreira, estagiárias(os) e devs juniores que querem focar no backend com segurança, prática e clareza — especialmente com Kotlin, Java ou arquitetura.
-               </div>
-             </div>
-           </li>
-           <li class="faq-item">
-             <button class="faq-q" aria-expanded="false">
-               <span>Tem suporte depois da mentoria?</span>
-               <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-             </button>
-             <div class="faq-a" hidden>
-               <div>
-                 Sim! Você recebe um <strong>PDF consolidado</strong> com os principais pontos, o plano de ação e próximos passos. E pode me procurar para tirar dúvidas pontuais sobre o plano combinado.
-               </div>
-             </div>
-           </li>
-           <li class="faq-item">
-             <button class="faq-q" aria-expanded="false">
-               <span>Posso remarcar a sessão?</span>
-               <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-             </button>
-             <div class="faq-a" hidden>
-               <div>
-                 Sim! É possível remarcar até <strong>12h antes</strong> do horário agendado, sem custo extra.
-               </div>
-             </div>
-           </li>
-         
-         </ul>
-       </div>
-     </div>
-   </section>
-   
-   <section class="py-20">
-     <div class="mx-auto max-w-6xl px-6 glass rounded-2xl p-10 text-center">
-       <h2 class="text-2xl md:text-3xl font-bold font-heading">Pronta(o) para o próximo passo?</h2>
-       <p class="mt-3 text-[color:var(--ink-2)]">Bora tomar um café e construir seu plano com clareza e técnica.</p>
-       <a href="#agendamento" class="mt-6 inline-block btn-primary glow rounded-full px-8 py-3 font-medium">Agendar meu café</a>
-     </div>
-   </section>
-   </main>
-   
-   <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20com%20Caf%C3%A9" 
-   target="_blank"
-   rel="noopener" 
-   class="whatsapp-button" 
-   aria-label="Fale comigo no WhatsApp">
-   <img src="./assets/whatsapp-logo.svg" alt="WhatsApp" />
-   </a>
-   
-   <footer class="py-10 text-center text-sm text-[color:var(--ink-2)]">
-    <p>© <span id="y"></span> Mentoria com Café • por Jackie Nascimento</p>
+    <section id="agendamento">
+      <div class="mx-auto max-w-3xl px-6 glass rounded-2xl p-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2 font-heading">
+          Reserve seu horário e confirme seu café
+        </h2>
+        <p class="text-[color:var(--ink-2)] max-w-xl mx-auto">
+          Me chame pelo WhatsApp com seu objetivo. Eu envio a agenda, o formulário de alinhamento e as opções de pagamento.
+        </p>
+        <ol class="list-decimal list-inside space-y-3 text-[color:var(--ink-2)] max-w-xl mx-auto mt-5 text-left">
+          <li>
+            <strong>Fale comigo:</strong> conte seu momento atual e o que quer destravar.
+          </li>
+          <li>
+            <strong>Escolha o horário:</strong> você recebe a agenda e o formulário de alinhamento.
+          </li>
+          <li>
+            <strong>Confirme a reserva:</strong> pagamento a partir de <strong>R$ 70,00</strong>, via Pix ou cartão.
+          </li>
+        </ol>
+
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <a class="btn-primary glow rounded-full px-5 py-3 font-medium focus-ring"
+            href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
+            target="_blank"
+            rel="noopener">
+            Quero agendar pelo WhatsApp
+          </a>
+        </div>
+        <p class="mt-4 text-sm font-medium" style="color:var(--ink-2)">
+          Ainda em dúvida? <a class="text-violet-400 hover:underline focus-ring" href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20entender%20se%20a%20Mentoria%20com%20Caf%C3%A9%20faz%20sentido%20para%20meu%20momento.%20Minha%20d%C3%BAvida%20principal%20%C3%A9:%20____." target="_blank" rel="noopener">me chame para conversar primeiro</a>.
+        </p>
+
+        <p class="mt-4 text-xs text-[color:var(--ink-2)] max-w-xl mx-auto">
+          Remarcações podem ser feitas até 12h antes do horário combinado. Cancelamentos e reembolsos são avaliados antes da confirmação da reserva. Dados de contato são usados apenas para organizar a mentoria e retornar sua mensagem.
+        </p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="mx-auto max-w-6xl px-6">
+        <header class="text-center mb-6">
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">FAQ rápido</h2>
+          <p class="mt-2 text-sm md:text-base prose-muted">
+            Dúvidas comuns sobre a mentoria, agendamento, pagamento e suporte.
+          </p>
+        </header>
+
+        <div class="faq">
+          <ul class="faq-list">
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Como faço para agendar?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Você entra em contato pelo WhatsApp, me conta seu objetivo e recebe a agenda com horários disponíveis. Depois de escolher o horário, envio as opções de pagamento e o formulário de alinhamento.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Quanto custa?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  O investimento é a partir de <strong>R$ 70,00</strong>. O valor é confirmado no contato inicial, antes da reserva do horário.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Posso pagar no cartão?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Sim. Além do Pix, você pode pagar com cartão pelo link de cobrança. As opções são enviadas depois do contato inicial e antes da confirmação da reserva.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Para onde envio o comprovante?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  De preferência pelo WhatsApp
+                  <a class="text-violet-400 hover:underline focus-ring" href="https://wa.me/5511984853856" target="_blank" rel="noopener">+55 11 98485-3856</a>.
+                  Se preferir, pode enviar por e-mail:
+                  <a class="text-violet-400 hover:underline focus-ring" href="mailto:jackeline_nascimento@hotmail.com">jackeline_nascimento@hotmail.com</a>.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Qual é a chave Pix?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  A chave Pix é o e-mail: <code>jackeline_nascimento@hotmail.com</code>. Esta informação também é enviada após o contato para agendamento.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Tem suporte depois da mentoria?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Sim. Você recebe um <strong>PDF consolidado</strong> com diagnóstico, principais pontos, plano de ação e próximos passos. Também pode me procurar para dúvidas pontuais sobre o plano combinado.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Posso remarcar ou cancelar?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Sim. Você pode remarcar até <strong>12h antes</strong> do horário agendado. Cancelamentos e reembolsos são alinhados antes da confirmação da reserva.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20" id="cta-final">
+      <div class="mx-auto max-w-6xl px-6 glass rounded-2xl p-10 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold font-heading">Pronta(o) para o próximo passo?</h2>
+        <p class="mt-3 text-[color:var(--ink-2)]">Bora transformar seu momento atual em um plano possível de executar.</p>
+        <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
+          class="mt-6 inline-block btn-primary glow rounded-full px-8 py-3 font-medium focus-ring"
+          target="_blank"
+          rel="noopener">
+          Agendar pelo WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20com%20Caf%C3%A9.%20Meu%20momento%20atual%20%C3%A9:%20____."
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-button focus-ring"
+    aria-label="Fale comigo no WhatsApp">
+    <img src="./assets/whatsapp-logo.svg" alt="WhatsApp" />
+  </a>
+
+  <footer class="py-10 text-center text-sm text-[color:var(--ink-2)]">
+    <p>&copy; <span id="y"></span> Mentoria com Café - por Jackie Nascimento</p>
   </footer>
-  
+
   <script src="./scripts/main.js"></script>
   <script src="./scripts/ga.js"></script>
-
 </body>
 </html>

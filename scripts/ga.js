@@ -41,7 +41,7 @@
       });
     };
 
-    document.querySelectorAll('a[href="#agendamento"], a[href="#pix"]').forEach((a) => {
+    document.querySelectorAll('a[href="#agendamento"], a[href="#como-funciona"]').forEach((a) => {
       onClickSend(a, "cta_agendar_click");
     });
 
@@ -65,7 +65,50 @@
       });
     });
 
-    // Removido o rastreamento específico de pix_copy e pagamento_cartao_click.
+    document.querySelectorAll(".faq-q").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item");
+        const question = (btn.textContent || "").trim();
+        const isOpen = item && item.classList.contains("open");
+
+        if (isOpen) {
+          send("faq_open", {
+            question,
+            location_path: window.location.pathname,
+          });
+        }
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      const sectionEvents = {
+        agendamento: "view_agendamento",
+        faq: "view_faq",
+        feedbacks: "view_feedbacks",
+        "para-quem": "view_para_quem",
+      };
+
+      const seen = new Set();
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const id = entry.target.id;
+          if (!id || seen.has(id)) return;
+
+          seen.add(id);
+          send(sectionEvents[id], {
+            location_path: window.location.pathname,
+          });
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.45 });
+
+      Object.keys(sectionEvents).forEach((id) => {
+        const section = document.getElementById(id);
+        if (section) observer.observe(section);
+      });
+    }
 
     setTimeout(() => {
       send("engaged_45s");
