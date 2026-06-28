@@ -46,7 +46,10 @@ mediaQuery.addEventListener('change', (event) => {
   applyTheme(event.matches ? 'light' : 'dark');
 });
 
-document.getElementById('y').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('y');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 document.querySelectorAll('.faq-item').forEach((item) => {
   const btn = item.querySelector('.faq-q');

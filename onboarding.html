@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboarding da Mentoria com Café</title>
+  <meta name="description" content="Formulário de onboarding da Mentoria com Café para preparar uma sessão personalizada em poucos minutos." />
+  <meta name="theme-color" content="#0B0F1A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      const urlTheme = new URLSearchParams(window.location.search).get('theme');
+      const storedTheme = localStorage.getItem('mentoria-theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      const initialTheme = urlTheme === 'light' || urlTheme === 'dark'
+        ? urlTheme
+        : storedTheme || preferredTheme;
+      document.documentElement.dataset.theme = initialTheme;
+    })();
+  </script>
+</head>
+<body class="antialiased selection:bg-violet-500/30 selection:text-white">
+  <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/0">
+    <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
+      <a href="./index.html" class="flex items-center gap-2 focus-ring">
+        <span class="inline-block h-3 w-3 rounded-full" style="background:linear-gradient(135deg,var(--violet),var(--sky))"></span>
+        <span class="font-semibold tracking-wide font-heading">Mentoria com Café</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
+        <a class="nav-link focus-ring" href="./index.html#como-funciona">Como funciona</a>
+        <a class="nav-link focus-ring" href="./index.html#entregavel">Entregável</a>
+        <a class="nav-link focus-ring" href="./index.html#faq">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Tenho%20uma%20duvida%20sobre%20o%20formulario%20da%20Mentoria%20com%20Cafe."
+          class="btn-outline rounded-full px-4 py-2 text-sm font-medium focus-ring"
+          target="_blank"
+          rel="noopener">
+          Falar no WhatsApp
+        </a>
+        <button
+          id="themeToggle"
+          class="theme-toggle focus-ring"
+          type="button"
+          aria-label="Alternar entre tema claro e escuro"
+          aria-pressed="false">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+              <path d="M12 2.5V4.5M12 19.5V21.5M4.93 4.93 6.34 6.34M17.66 17.66 19.07 19.07M2.5 12H4.5M19.5 12H21.5M4.93 19.07 6.34 17.66M17.66 6.34 19.07 4.93" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M18 12.8A6.8 6.8 0 1 1 11.2 6 5.4 5.4 0 0 0 18 12.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="pb-16">
+    <section class="pt-10 pb-8">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] gap-8 items-start">
+          <aside class="order-2 space-y-6 xl:order-1 xl:sticky xl:top-28">
+            <div class="glass rounded-2xl p-8">
+              <p class="eyebrow">Onboarding da sessão</p>
+              <h1 class="mt-3 text-3xl md:text-4xl font-bold leading-tight font-heading">
+                Vamos preparar uma mentoria feita para o seu momento
+              </h1>
+              <p class="mt-4 text-[color:var(--ink-2)] leading-relaxed">
+                Este formulário leva cerca de 5 minutos. Ele me ajuda a preparar uma sessão personalizada para você.
+              </p>
+              <p class="mt-4 text-[color:var(--ink-2)] leading-relaxed">
+                Com essas respostas, consigo chegar na conversa já entendendo seu contexto, sua principal dor e o resultado que você quer conquistar.
+              </p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 onboarding-side-card">
+              <h2 class="text-lg font-semibold font-heading">O que eu analiso antes da sessão</h2>
+              <ul class="mt-4 space-y-3 text-[color:var(--ink-2)]">
+                <li>Leitura do formulário e revisão do seu momento atual.</li>
+                <li>Currículo, LinkedIn e GitHub quando fizer sentido.</li>
+                <li>Roteiro da conversa baseado nas suas prioridades.</li>
+              </ul>
+            </div>
+
+            <div class="glass rounded-2xl p-6 onboarding-side-card">
+              <h2 class="text-lg font-semibold font-heading">O foco aqui</h2>
+              <p class="mt-3 text-[color:var(--ink-2)] leading-relaxed">
+                Não é uma entrevista. É só o suficiente para eu transformar a sessão em uma consultoria objetiva, acolhedora e altamente personalizada.
+              </p>
+            </div>
+          </aside>
+
+          <div class="order-1 glass rounded-2xl p-6 md:p-8 onboarding-shell xl:order-2">
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div>
+                <p class="eyebrow">Etapas rápidas</p>
+                <h2 class="mt-2 text-2xl font-bold font-heading">Formulário de onboarding</h2>
+              </div>
+              <div class="text-sm text-[color:var(--ink-2)] md:text-right">
+                <p id="saveStatus">Salvo automaticamente no seu navegador.</p>
+                <p class="mt-1">Tempo estimado: 3 a 5 minutos.</p>
+              </div>
+            </div>
+
+            <div class="mt-6 onboarding-progress">
+              <div class="flex items-center justify-between gap-3 text-xs uppercase tracking-[0.2em] text-[color:var(--ink-2)]">
+                <span id="progressLabel">Etapa 1 de 5</span>
+                <span id="progressPercent">20%</span>
+              </div>
+              <div class="progress-rail mt-3" aria-hidden="true">
+                <div id="progressBar" class="progress-fill"></div>
+              </div>
+            </div>
+
+            <form id="onboardingForm" class="mt-8" novalidate>
+              <div class="step-indicators" aria-hidden="true">
+                <span class="step-indicator active"></span>
+                <span class="step-indicator"></span>
+                <span class="step-indicator"></span>
+                <span class="step-indicator"></span>
+                <span class="step-indicator"></span>
+              </div>
+
+              <section class="form-step active" data-step="1" aria-labelledby="step-1-title">
+                <div class="step-copy">
+                  <p class="step-kicker">Etapa 1</p>
+                  <h3 id="step-1-title" class="text-2xl font-bold font-heading">Informações para eu saber com quem vou conversar</h3>
+                  <p class="mt-2 text-[color:var(--ink-2)]">Começamos pelo essencial e, se você quiser, já pode incluir links para materiais que eu analiso antes da sessão.</p>
+                </div>
+
+                <div class="form-section">
+                  <h4 class="section-title">Informações básicas</h4>
+                  <div class="form-grid">
+                    <label class="form-field">
+                      <span class="field-label">Nome</span>
+                      <input class="form-input" type="text" name="name" autocomplete="name" required />
+                    </label>
+                    <label class="form-field">
+                      <span class="field-label">Email</span>
+                      <input class="form-input" type="email" name="email" autocomplete="email" required />
+                    </label>
+                    <label class="form-field form-field-full">
+                      <span class="field-label">WhatsApp</span>
+                      <input class="form-input" type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" required />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+                    <h4 class="section-title">Links opcionais</h4>
+                    <p class="helper-text">Se desejar que eu analise esses materiais durante a mentoria.</p>
+                  </div>
+                  <div class="form-grid">
+                    <label class="form-field">
+                      <span class="field-label">LinkedIn</span>
+                      <input class="form-input" type="url" name="linkedin" placeholder="https://linkedin.com/in/..." />
+                    </label>
+                    <label class="form-field">
+                      <span class="field-label">GitHub</span>
+                      <input class="form-input" type="url" name="github" placeholder="https://github.com/..." />
+                    </label>
+                    <label class="form-field form-field-full">
+                      <span class="field-label">Portfólio</span>
+                      <input class="form-input" type="url" name="portfolio" placeholder="https://..." />
+                    </label>
+                  </div>
+                </div>
+              </section>
+
+              <section class="form-step" data-step="2" aria-labelledby="step-2-title" hidden>
+                <div class="step-copy">
+                  <p class="step-kicker">Etapa 2</p>
+                  <h3 id="step-2-title" class="text-2xl font-bold font-heading">Seu momento e o que você quer destravar</h3>
+                  <p class="mt-2 text-[color:var(--ink-2)]">Aqui eu quero entender o seu contexto atual e o resultado que faria essa sessão valer muito a pena para você.</p>
+                </div>
+
+                <fieldset class="form-section">
+                  <legend class="section-title">Qual opção melhor descreve seu momento?</legend>
+                  <div class="option-grid">
+                    <label class="choice-card">
+                      <input type="radio" name="moment" value="Estudando programação" required />
+                      <span>Estudando programação</span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="moment" value="Em transição de carreira" required />
+                      <span>Em transição de carreira</span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="moment" value="Buscando minha primeira vaga" required />
+                      <span>Buscando minha primeira vaga</span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="moment" value="Desenvolvedor(a) em evolução" required />
+                      <span>Desenvolvedor(a) em evolução</span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="moment" value="Quero migrar para Backend" required />
+                      <span>Quero migrar para Backend</span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="moment" value="Outro" required />
+                      <span>Outro</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="form-section">
+                  <label class="form-field">
+                    <span class="field-label">O que você espera conquistar com esta mentoria?</span>
+                    <textarea class="form-input form-textarea" name="goal" rows="5" required></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="form-step" data-step="3" aria-labelledby="step-3-title" hidden>
+                <div class="step-copy">
+                  <p class="step-kicker">Etapa 3</p>
+                  <h3 id="step-3-title" class="text-2xl font-bold font-heading">Sua principal dificuldade e os temas da conversa</h3>
+                  <p class="mt-2 text-[color:var(--ink-2)]">Quero entender onde está a fricção hoje e quais assuntos devem ter prioridade na nossa sessão.</p>
+                </div>
+
+                <div class="form-section">
+                  <label class="form-field">
+                    <span class="field-label">Qual é sua maior dificuldade hoje?</span>
+                    <textarea class="form-input form-textarea" name="challenge" rows="5" required></textarea>
+                  </label>
+                </div>
+
+                <fieldset class="form-section">
+                  <legend class="section-title">Sobre quais assuntos você gostaria de conversar?</legend>
+                  <div class="option-grid option-grid-checkboxes">
+                    <label class="choice-card">
+                      <input type="checkbox" name="topics" value="Carreira" />
+                      <span>Carreira</span>
+                    </label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Currículo" /><span>Currículo</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="LinkedIn" /><span>LinkedIn</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="GitHub" /><span>GitHub</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Portfólio" /><span>Portfólio</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Java" /><span>Java</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Spring Boot" /><span>Spring Boot</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Backend" /><span>Backend</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Arquitetura" /><span>Arquitetura</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Docker" /><span>Docker</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="AWS" /><span>AWS</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Entrevistas" /><span>Entrevistas</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Plano de estudos" /><span>Plano de estudos</span></label>
+                    <label class="choice-card"><input type="checkbox" name="topics" value="Outro" /><span>Outro</span></label>
+                  </div>
+                </fieldset>
+              </section>
+
+              <section class="form-step" data-step="4" aria-labelledby="step-4-title" hidden>
+                <div class="step-copy">
+                  <p class="step-kicker">Etapa 4</p>
+                  <h3 id="step-4-title" class="text-2xl font-bold font-heading">Materiais e a pergunta mais importante</h3>
+                  <p class="mt-2 text-[color:var(--ink-2)]">Esta é a parte que mais me ajuda a preparar a sessão como uma consultoria de verdade, não uma conversa genérica.</p>
+                </div>
+
+                <fieldset class="form-section">
+                  <legend class="section-title">Existe algum material que você gostaria que eu analisasse durante a mentoria?</legend>
+                  <div class="option-grid option-grid-checkboxes">
+                    <label class="choice-card"><input type="checkbox" name="materials" value="Currículo" /><span>Currículo</span></label>
+                    <label class="choice-card"><input type="checkbox" name="materials" value="LinkedIn" /><span>LinkedIn</span></label>
+                    <label class="choice-card"><input type="checkbox" name="materials" value="GitHub" /><span>GitHub</span></label>
+                    <label class="choice-card"><input type="checkbox" name="materials" value="Projeto específico" /><span>Projeto específico</span></label>
+                    <label class="choice-card"><input type="checkbox" name="materials" value="Vaga de interesse" /><span>Vaga de interesse</span></label>
+                    <label class="choice-card"><input type="checkbox" name="materials" value="Nenhum" /><span>Nenhum</span></label>
+                  </div>
+                </fieldset>
+
+                <div class="form-section form-section-highlight">
+                  <label class="form-field">
+                    <span class="field-label field-label-strong">Se você pudesse sair da mentoria com apenas uma resposta, qual seria essa pergunta?</span>
+                    <span class="helper-text">Essa é a pergunta mais importante do formulário e a melhor forma de eu entender como te ajudar com foco.</span>
+                    <textarea class="form-input form-textarea" name="mainQuestion" rows="5" required></textarea>
+                  </label>
+                </div>
+              </section>
+
+              <section class="form-step" data-step="5" aria-labelledby="step-5-title" hidden>
+                <div class="step-copy">
+                  <p class="step-kicker">Etapa 5</p>
+                  <h3 id="step-5-title" class="text-2xl font-bold font-heading">Últimos detalhes antes de enviar</h3>
+                  <p class="mt-2 text-[color:var(--ink-2)]">Falta pouco. Aqui você pode complementar o contexto e confirmar a política de agendamento.</p>
+                </div>
+
+                <div class="form-section">
+                  <label class="form-field">
+                    <span class="field-label">Existe alguma informação importante que você gostaria de compartilhar antes da nossa conversa?</span>
+                    <textarea class="form-input form-textarea" name="notes" rows="4"></textarea>
+                  </label>
+                </div>
+
+                <div class="form-section">
+                  <label class="checkbox-line">
+                    <input type="checkbox" name="policyConsent" required />
+                    <span>Li e concordo com a <a class="text-violet-400 hover:underline focus-ring" href="./index.html#agendamento">política de agendamento e cancelamento</a>.</span>
+                  </label>
+                </div>
+              </section>
+
+              <section id="successScreen" class="form-step" data-step="6" aria-labelledby="success-title" hidden>
+                <div class="success-state">
+                  <span class="success-badge">Enviado com sucesso</span>
+                  <h3 id="success-title" class="mt-4 text-3xl font-bold font-heading">Recebi suas respostas</h3>
+                  <p class="mt-4 text-[color:var(--ink-2)] max-w-2xl mx-auto leading-relaxed">
+                    Obrigada por preencher com calma. Com essas informações, eu consigo preparar uma sessão mais objetiva, personalizada e útil para o seu momento.
+                  </p>
+                  <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Acabei%20de%20preencher%20o%20formulario%20de%20onboarding%20da%20Mentoria%20com%20Cafe."
+                      class="btn-primary glow rounded-full px-6 py-3 font-medium focus-ring"
+                      target="_blank"
+                      rel="noopener">
+                      Avisar no WhatsApp
+                    </a>
+                    <a href="./index.html" class="btn-outline rounded-full px-6 py-3 font-medium focus-ring">Voltar para a landing</a>
+                  </div>
+                </div>
+              </section>
+
+              <div id="formError" class="form-error" role="alert" hidden></div>
+
+              <div id="formActions" class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <button id="backButton" type="button" class="btn-outline rounded-full px-6 py-3 font-medium focus-ring" disabled>
+                  Voltar
+                </button>
+                <button id="nextButton" type="button" class="btn-primary glow rounded-full px-6 py-3 font-medium focus-ring">
+                  Continuar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 text-center text-sm text-[color:var(--ink-2)]">
+    <p>&copy; <span id="y"></span> Mentoria com Café - por Jackie Nascimento</p>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/onboarding.js"></script>
+</body>
+</html>
