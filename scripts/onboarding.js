@@ -152,6 +152,11 @@
     return new URLSearchParams(formData).toString();
   };
 
+  const isValidWhatsapp = (value) => {
+    const digits = String(value).replace(/\D/g, "");
+    return digits.length >= 10 && digits.length <= 13;
+  };
+
   const validateStep = (stepIndex) => {
     const step = steps[stepIndex];
     const fields = getStepElements(stepIndex);
@@ -186,6 +191,13 @@
           return false;
         }
         continue;
+      }
+
+      if (field.name === "whatsapp" && !isValidWhatsapp(field.value)) {
+        markInvalid(field);
+        showError("Pode me enviar um WhatsApp valido? Exemplo: (11) 99999-9999.");
+        field.focus();
+        return false;
       }
 
       if (!field.checkValidity()) {
