@@ -121,7 +121,15 @@
               </div>
             </div>
 
-            <form id="onboardingForm" class="mt-8" novalidate>
+            <form
+              id="onboardingForm"
+              class="mt-8"
+              name="mentoria-onboarding"
+              method="POST"
+              data-netlify="true"
+              netlify
+              novalidate>
+              <input type="hidden" name="form-name" value="mentoria-onboarding" />
               <div class="step-indicators" aria-hidden="true">
                 <span class="step-indicator active"></span>
                 <span class="step-indicator"></span>

@@ -147,6 +147,11 @@
     formError.textContent = message;
   };
 
+  const encodeFormData = () => {
+    const formData = new FormData(form);
+    return new URLSearchParams(formData).toString();
+  };
+
   const validateStep = (stepIndex) => {
     const step = steps[stepIndex];
     const fields = getStepElements(stepIndex);
@@ -262,15 +267,43 @@
     }
   };
 
-  const submitForm = () => {
+  const submitForm = async () => {
     window.clearTimeout(autosaveTimeout);
     saveDraft();
-    submitted = true;
-    dirty = false;
-    localStorage.removeItem(STORAGE_KEY);
-    localStorage.removeItem(STEP_KEY);
-    updateSaveStatus("Tudo certo. Formulário finalizado.");
-    updateStepUI();
+
+    if (nextButton) {
+      nextButton.disabled = true;
+      nextButton.textContent = "Enviando...";
+    }
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encodeFormData(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Falha ao enviar o formulário.");
+      }
+
+      submitted = true;
+      dirty = false;
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem(STEP_KEY);
+      updateSaveStatus("Tudo certo. Formulário enviado.");
+      updateStepUI();
+    } catch (error) {
+      showError("Não consegui enviar agora. Se a página estiver no Netlify, tente novamente em alguns segundos.");
+      updateSaveStatus("Falha no envio. Seu rascunho continua salvo.");
+    } finally {
+      if (nextButton && !submitted) {
+        nextButton.disabled = false;
+        nextButton.textContent = "Enviar formulário";
+      }
+    }
   };
 
   restoreDraft();
@@ -289,11 +322,11 @@
   });
 
   if (nextButton) {
-    nextButton.addEventListener("click", () => {
+    nextButton.addEventListener("click", async () => {
       if (!validateStep(currentStep)) return;
 
       if (currentStep === steps.length - 2) {
-        submitForm();
+        await submitForm();
         return;
       }
 
