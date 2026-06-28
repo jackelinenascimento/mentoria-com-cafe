@@ -39,7 +39,7 @@ Uma sessão individual, preparada com antecedência, que combina acolhimento, pr
 3. Reconhece dores, transformação e autoridade da mentora.
 4. Clica em um CTA para WhatsApp.
 5. Recebe agenda e link do onboarding.
-6. Preenche o formulário curto com contexto, objetivo e materiais.
+6. Preenche o formulário curto com contexto, objetivo e materiais, consultando dentro da própria página a política, o entregável e o FAQ rápido quando necessário.
 7. Confirma a reserva com pagamento.
 8. Participa da sessão.
 9. Recebe PDF personalizado após a conversa.
@@ -86,8 +86,11 @@ Uma sessão individual, preparada com antecedência, que combina acolhimento, pr
 - Visual consistente com a landing
 - Etapas com progresso
 - Campos suficientes para preparar sessão personalizada
+- Conteúdo de apoio embutido na própria página para evitar abandono
 - `localStorage` para autosave
 - Alerta antes de sair da página com alterações não enviadas
+- Validação real de WhatsApp
+- Integração com Netlify Forms
 - Sucesso final com próximo passo claro
 
 ## Dados coletados no onboarding
@@ -103,6 +106,21 @@ Uma sessão individual, preparada com antecedência, que combina acolhimento, pr
 - Observações adicionais
 - Aceite da política de agendamento
 
+## Referência rápida embutida no onboarding
+
+O onboarding inclui um bloco interno de consulta rápida com:
+
+- como funciona
+- o que a pessoa recebe depois
+- política de agendamento
+- FAQ resumido
+
+Objetivo:
+
+- evitar que a pessoa saia da página no meio do preenchimento
+- reduzir risco de abandono
+- manter contexto e confiança até o envio
+
 ## Conteúdo crítico que precisa permanecer consistente
 
 - Duração da sessão: até 1h30
@@ -110,6 +128,7 @@ Uma sessão individual, preparada com antecedência, que combina acolhimento, pr
 - Pagamento: Pix ou cartão
 - Conversão principal: WhatsApp
 - Entregável: PDF personalizado pós-sessão
+- Formulário publicado no Netlify: `mentoria-onboarding`
 
 ## Mensuração
 
@@ -130,3 +149,4 @@ Eventos principais acompanhados hoje:
 - Sem bibliotecas desnecessárias
 - Reaproveitamento de componentes visuais
 - Sem divergência entre página pública e documentação
+- Consulta de política, FAQ e entregável sem navegação forçada para outra página
