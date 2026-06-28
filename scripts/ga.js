@@ -86,6 +86,10 @@
         faq: "view_faq",
         feedbacks: "view_feedbacks",
         "para-quem": "view_para_quem",
+        personalizacao: "view_personalizacao",
+        "preparo-mentoria": "view_preparo_mentoria",
+        "timeline-sessao": "view_timeline_sessao",
+        entregavel: "view_entregavel",
       };
 
       const seen = new Set();

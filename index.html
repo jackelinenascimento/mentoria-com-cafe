@@ -4,28 +4,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentoria com Café - por Jackie Nascimento</title>
-  <meta name="description" content="Mentoria 1:1 para carreira em tecnologia, backend, portfólio, LinkedIn e entrevistas. Saia com diagnóstico, prioridades e plano de ação claro." />
+  <meta name="description" content="Sessão 1:1 de mentoria para carreira em tecnologia, backend, portfólio, LinkedIn e entrevistas. Saia com diagnóstico personalizado e um plano de ação claro." />
   <meta name="theme-color" content="#0B0F1A" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mentoria com Café - por Jackie Nascimento" />
-  <meta property="og:description" content="Uma sessão 1:1 para organizar seu momento em tech e sair com próximos passos claros." />
+  <meta property="og:description" content="Uma sessão 1:1 extremamente personalizada para organizar seu momento em tech e sair com próximos passos claros." />
   <meta property="og:image" content="./assets/jackie.jpg" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mentoria com Café - por Jackie Nascimento" />
-  <meta name="twitter:description" content="Mentoria 1:1 para carreira, backend, portfólio, LinkedIn e entrevistas." />
+  <meta name="twitter:description" content="Sessão 1:1 personalizada para carreira, backend, portfólio, LinkedIn e entrevistas." />
   <meta name="twitter:image" content="./assets/jackie.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      const urlTheme = new URLSearchParams(window.location.search).get('theme');
+      const storedTheme = localStorage.getItem('mentoria-theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      const initialTheme = urlTheme === 'light' || urlTheme === 'dark'
+        ? urlTheme
+        : storedTheme || preferredTheme;
+      document.documentElement.dataset.theme = initialTheme;
+    })();
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "name": "Mentoria com Café",
-      "description": "Mentoria 1:1 para carreira em tecnologia, backend, portfólio, LinkedIn e entrevistas.",
+      "description": "Sessão 1:1 personalizada para carreira em tecnologia, backend, portfólio, LinkedIn e entrevistas.",
       "provider": {
         "@type": "Person",
         "name": "Jackie Nascimento",
@@ -38,7 +49,7 @@
         ]
       },
       "areaServed": "BR",
-      "serviceType": "Mentoria de carreira e tecnologia",
+      "serviceType": "Mentoria personalizada de carreira e tecnologia",
       "offers": {
         "@type": "Offer",
         "price": "70.00",
@@ -63,34 +74,54 @@
         <span class="font-semibold tracking-wide font-heading">Mentoria com Café</span>
       </a>
       <nav class="hidden lg:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
-        <a class="hover:text-white focus-ring" href="#como-funciona">Como funciona</a>
-        <a class="hover:text-white focus-ring" href="#para-quem">Para quem</a>
-        <a class="hover:text-white focus-ring" href="#feedbacks">Feedbacks</a>
-        <a class="hover:text-white focus-ring" href="#sobre">Sobre</a>
-        <a class="hover:text-white focus-ring" href="#faq">FAQ</a>
+        <a class="nav-link focus-ring" href="#como-funciona">Como funciona</a>
+        <a class="nav-link focus-ring" href="#para-quem">Para quem</a>
+        <a class="nav-link focus-ring" href="#feedbacks">Feedbacks</a>
+        <a class="nav-link focus-ring" href="#sobre">Sobre</a>
+        <a class="nav-link focus-ring" href="#faq">FAQ</a>
       </nav>
-      <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
-        class="btn-primary glow rounded-full px-4 py-2 text-sm font-medium focus-ring"
-        target="_blank"
-        rel="noopener">
-        Agendar
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
+          class="btn-primary glow rounded-full px-4 py-2 text-sm font-medium focus-ring"
+          target="_blank"
+          rel="noopener">
+          Agendar
+        </a>
+        <button
+          id="themeToggle"
+          class="theme-toggle focus-ring"
+          type="button"
+          aria-label="Alternar entre tema claro e escuro"
+          aria-pressed="false">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+              <path d="M12 2.5V4.5M12 19.5V21.5M4.93 4.93 6.34 6.34M17.66 17.66 19.07 19.07M2.5 12H4.5M19.5 12H21.5M4.93 19.07 6.34 17.66M17.66 6.34 19.07 4.93" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M18 12.8A6.8 6.8 0 1 1 11.2 6 5.4 5.4 0 0 0 18 12.8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
     <section id="top" class="relative">
       <div class="mx-auto max-w-4xl px-6 pt-8 pb-8 flex flex-col items-center text-center gap-5">
-        <p class="eyebrow">Mentoria 1:1 para carreira em tecnologia</p>
+        <p class="eyebrow">Sessão 1:1 personalizada para carreira em tecnologia</p>
         <h1 class="text-4xl lg:text-5xl font-bold leading-tight font-heading">
           Mentoria com Café<br/>
           <span class="text-transparent bg-clip-text" style="background-image:linear-gradient(135deg,var(--sky),var(--violet))">
-            plano claro para carreira, portfólio ou backend
+            diagnóstico claro para carreira, portfólio ou backend
           </span>
         </h1>
         <p class="text-lg text-[color:var(--ink-2)] max-w-2xl">
-          Uma sessão comigo para entender seu momento, diagnosticar lacunas e transformar dúvidas em prioridades práticas,
-          sem perder acolhimento nem profundidade técnica.
+          Uma sessão individual, preparada com antecedência, para entender seu momento, diagnosticar lacunas e transformar dúvidas em um plano de ação possível,
+          com acolhimento e profundidade técnica.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-4">
           <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
@@ -102,7 +133,7 @@
           <a href="#como-funciona" class="btn-outline rounded-full px-6 py-3 font-medium focus-ring">Ver como funciona</a>
         </div>
         <p class="text-sm text-[color:var(--ink-2)] max-w-xl">
-          Sem compromisso: me conte seu momento e eu te digo se a mentoria faz sentido para o que você precisa agora.
+          Sem compromisso: me conte seu momento e eu te digo se essa sessão faz sentido para o que você precisa agora.
         </p>
         <div class="flex flex-wrap justify-center gap-2 text-xs text-[color:var(--ink-2)]">
           <span class="tag rounded-full px-3 py-1">Transição de Carreira</span>
@@ -140,7 +171,7 @@
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           <a class="btn-outline rounded-full px-5 py-2 focus-ring" href="https://www.linkedin.com/in/jackelinenascimento" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn-outline rounded-full px-5 py-2 focus-ring" href="https://github.com/jackelinenascimento" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn-outline rounded-full px-5 py-2 focus-ring" href="https://www.instagram.com/jackienascimento_" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn-outline rounded-full px-5 py-2 focus-ring" href="https://leitura.dev" target="_blank" rel="noopener">Leitura Dev</a>
         </div>
       </div>
     </section>
@@ -180,8 +211,123 @@
             <p class="step-number">4</p>
             <h3 class="text-lg font-semibold mb-2 font-heading">Sessão</h3>
             <p class="text-[color:var(--ink-2)]">
-              Encontro online de até <strong>1h30</strong> com diagnóstico, prioridades e próximos passos.
+              Encontro online de até <strong>1h30</strong> com diagnóstico, prioridades e plano de ação.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="personalizacao" class="py-6">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="glass rounded-2xl p-8 md:p-10 text-center">
+          <p class="eyebrow">Sessão preparada para você</p>
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">Cada sessão é construída a partir do seu momento profissional</h2>
+          <p class="mt-3 text-[color:var(--ink-2)] max-w-3xl mx-auto leading-relaxed">
+            Não utilizo apresentações prontas nem uma conversa genérica. Cada mentoria é preparada individualmente com base no que você envia,
+            para que a sessão seja objetiva, personalizada e útil de verdade.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="preparo-mentoria">
+      <div class="mx-auto max-w-6xl px-6">
+        <header class="text-center mb-8">
+          <p class="eyebrow">Antes, durante e depois</p>
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">Como preparo sua mentoria</h2>
+          <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+            A sessão dura até 1h30, mas o trabalho começa antes da chamada e continua depois dela.
+          </p>
+        </header>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <article class="glass rounded-2xl p-8">
+            <p class="step-number">1</p>
+            <h3 class="text-lg font-semibold mb-4 font-heading">Antes da sessão</h3>
+            <ul class="space-y-3 text-[color:var(--ink-2)]">
+              <li>Analiso o formulário enviado para entender seu contexto e objetivo.</li>
+              <li>Reviso seu currículo e seu LinkedIn com foco no que mais pesa agora.</li>
+              <li>Analiso seu GitHub quando isso fizer sentido para a sua meta.</li>
+              <li>Preparo um roteiro personalizado para a conversa render com profundidade.</li>
+            </ul>
+          </article>
+
+          <article class="glass rounded-2xl p-8">
+            <p class="step-number">2</p>
+            <h3 class="text-lg font-semibold mb-4 font-heading">Durante a sessão</h3>
+            <ul class="space-y-3 text-[color:var(--ink-2)]">
+              <li>Fazemos um diagnóstico honesto do seu momento.</li>
+              <li>Organizamos prioridades para evitar esforço disperso.</li>
+              <li>Respondemos dúvidas técnicas e de carreira com contexto.</li>
+              <li>Definimos um plano de ação claro para o próximo passo.</li>
+            </ul>
+          </article>
+
+          <article class="glass rounded-2xl p-8">
+            <p class="step-number">3</p>
+            <h3 class="text-lg font-semibold mb-4 font-heading">Depois da sessão</h3>
+            <ul class="space-y-3 text-[color:var(--ink-2)]">
+              <li>Envio um PDF personalizado com tudo o que estruturamos.</li>
+              <li>Entrego recomendações alinhadas ao seu momento e objetivo.</li>
+              <li>Organizo próximos passos para você seguir com clareza após a conversa.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline-sessao">
+      <div class="mx-auto max-w-5xl px-6">
+        <header class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold font-heading">O que acontece durante a sessão</h2>
+          <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
+            Uma conversa organizada para diagnosticar, priorizar e sair com clareza.
+          </p>
+        </header>
+
+        <div class="session-timeline glass rounded-2xl p-8 md:p-10" aria-label="Etapas da sessão de mentoria">
+          <div class="timeline-step">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div>
+              <h3 class="font-semibold font-heading">Chegada</h3>
+              <p class="text-[color:var(--ink-2)]">Alinhamos rapidamente objetivo, contexto e expectativa para a sessão.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div>
+              <h3 class="font-semibold font-heading">Entendimento do momento</h3>
+              <p class="text-[color:var(--ink-2)]">Exploramos seu cenário atual para separar ruído do que realmente precisa de atenção.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div>
+              <h3 class="font-semibold font-heading">Diagnóstico</h3>
+              <p class="text-[color:var(--ink-2)]">Identificamos forças, lacunas e pontos de decisão mais importantes para seu momento.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div>
+              <h3 class="font-semibold font-heading">Discussão</h3>
+              <p class="text-[color:var(--ink-2)]">Tiramos dúvidas e avaliamos caminhos possíveis com critérios práticos.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div>
+              <h3 class="font-semibold font-heading">Plano de ação</h3>
+              <p class="text-[color:var(--ink-2)]">Traduzimos a conversa em prioridades objetivas para você executar.</p>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div>
+              <h3 class="font-semibold font-heading">Próximos passos</h3>
+              <p class="text-[color:var(--ink-2)]">Encerramos com direção clara sobre o que fazer primeiro e o que pode esperar.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -189,22 +335,39 @@
 
     <section id="entregavel">
       <div class="mx-auto max-w-6xl px-6">
-        <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-6 items-stretch">
+        <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-6 items-stretch">
           <div class="glass rounded-2xl p-8">
             <p class="eyebrow">Entregável pós-sessão</p>
-            <h2 class="text-2xl md:text-3xl font-bold mb-3 font-heading">Você recebe um PDF consolidado</h2>
+            <h2 class="text-2xl md:text-3xl font-bold mb-3 font-heading">Você recebe um PDF personalizado</h2>
             <p class="text-[color:var(--ink-2)] leading-relaxed">
-              Depois da conversa, envio um resumo organizado do que construímos: diagnóstico do momento,
-              prioridades, recomendações e um plano de ação para você continuar sem depender da memória da reunião.
+              Depois da conversa, envio um material organizado com o que foi diagnosticado e decidido na sessão,
+              para que você continue com clareza sem depender da memória da reunião.
+            </p>
+            <p class="mt-4 text-[color:var(--ink-2)] leading-relaxed">
+              A ideia não é te entregar um resumo genérico, mas um documento que funcione como referência prática para o seu próximo ciclo de decisões.
             </p>
           </div>
           <div class="glass rounded-2xl p-8">
-            <h3 class="text-lg font-semibold mb-4 font-heading">O que vai no documento</h3>
-            <ul class="space-y-3 text-[color:var(--ink-2)]">
-              <li><strong>Diagnóstico:</strong> onde você está e quais lacunas merecem atenção.</li>
-              <li><strong>Prioridades:</strong> o que fazer primeiro, sem tentar abraçar tudo de uma vez.</li>
-              <li><strong>Plano:</strong> próximos passos, referências e ações práticas combinadas na sessão.</li>
-            </ul>
+            <div class="pdf-mockup" aria-label="Prévia ilustrativa do PDF entregue após a sessão">
+              <div class="pdf-window">
+                <div class="pdf-window-bar" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pdf-sheet">
+                  <p class="pdf-kicker">Mentoria com Café</p>
+                  <h3 class="text-lg font-semibold mb-4 font-heading">O que vai no PDF</h3>
+                  <ul class="pdf-checklist text-[color:var(--ink-2)]">
+                    <li>Diagnóstico</li>
+                    <li>Pontos fortes</li>
+                    <li>Lacunas</li>
+                    <li>Plano de ação</li>
+                    <li>Roadmap recomendado</li>
+                    <li>Materiais</li>
+                    <li>Próximos passos</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -215,7 +378,7 @@
         <header class="text-center mb-8">
           <h2 class="text-2xl md:text-3xl font-bold font-heading">Para quem é</h2>
           <p class="mt-2 text-sm md:text-base" style="color:var(--ink-2)">
-            A mentoria funciona melhor quando existe uma dúvida real para organizar e transformar em ação.
+            A sessão funciona melhor quando existe uma dúvida real para organizar e transformar em ação.
           </p>
         </header>
 
@@ -347,11 +510,11 @@
 
     <section id="agendamento">
       <div class="mx-auto max-w-3xl px-6 glass rounded-2xl p-8 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-2 font-heading">
-          Reserve seu horário e confirme seu café
-        </h2>
+          <h2 class="text-2xl md:text-3xl font-bold mb-2 font-heading">
+            Reserve seu horário
+          </h2>
         <p class="text-[color:var(--ink-2)] max-w-xl mx-auto">
-          Me chame pelo WhatsApp com seu objetivo. Eu envio a agenda, o formulário de alinhamento e as opções de pagamento.
+          Me chame pelo WhatsApp com seu objetivo. Eu envio a agenda, o formulário de alinhamento e as opções de pagamento para confirmar sua sessão.
         </p>
         <ol class="list-decimal list-inside space-y-3 text-[color:var(--ink-2)] max-w-xl mx-auto mt-5 text-left">
           <li>
@@ -364,6 +527,21 @@
             <strong>Confirme a reserva:</strong> pagamento a partir de <strong>R$ 70,00</strong>, via Pix ou cartão.
           </li>
         </ol>
+
+        <article class="policy-card mt-8 max-w-2xl mx-auto text-left">
+          <h3 class="text-lg font-semibold mb-3 font-heading">Política de agendamento</h3>
+          <p class="text-[color:var(--ink-2)] leading-relaxed">
+            Após a confirmação do pagamento, o horário fica reservado exclusivamente para você.
+          </p>
+          <p class="mt-3 text-[color:var(--ink-2)] leading-relaxed">
+            Cada sessão é preparada previamente com base nas informações enviadas no formulário, currículo, LinkedIn e GitHub, quando aplicável.
+          </p>
+          <ul class="mt-5 space-y-3 text-[color:var(--ink-2)]">
+            <li>Reagendamentos podem ser realizados com até 24 horas de antecedência.</li>
+            <li>Cancelamentos após esse prazo ou não comparecimento serão considerados como sessão realizada.</li>
+            <li>Situações excepcionais poderão ser analisadas individualmente.</li>
+          </ul>
+        </article>
 
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           <a class="btn-primary glow rounded-full px-5 py-3 font-medium focus-ring"
@@ -378,7 +556,7 @@
         </p>
 
         <p class="mt-4 text-xs text-[color:var(--ink-2)] max-w-xl mx-auto">
-          Remarcações podem ser feitas até 12h antes do horário combinado. Cancelamentos e reembolsos são avaliados antes da confirmação da reserva. Dados de contato são usados apenas para organizar a mentoria e retornar sua mensagem.
+          Seus dados de contato são usados apenas para organizar a mentoria e retornar sua mensagem.
         </p>
       </div>
     </section>
@@ -388,7 +566,7 @@
         <header class="text-center mb-6">
           <h2 class="text-2xl md:text-3xl font-bold font-heading">FAQ rápido</h2>
           <p class="mt-2 text-sm md:text-base prose-muted">
-            Dúvidas comuns sobre a mentoria, agendamento, pagamento e suporte.
+            Dúvidas comuns sobre a sessão, agendamento, pagamento e entregáveis.
           </p>
         </header>
 
@@ -402,6 +580,28 @@
               <div class="faq-a" hidden>
                 <div>
                   Você entra em contato pelo WhatsApp, me conta seu objetivo e recebe a agenda com horários disponíveis. Depois de escolher o horário, envio as opções de pagamento e o formulário de alinhamento.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Preciso estudar antes?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Não. Você pode chegar exatamente do jeito que está. A sessão serve justamente para organizar seu momento, entender lacunas e transformar isso em próximos passos mais claros.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Preciso ter experiência?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Não. A mentoria atende tanto quem está em transição ou buscando a primeira oportunidade quanto quem já trabalha com tecnologia e quer mais direção em backend, posicionamento ou entrevistas.
                 </div>
               </div>
             </li>
@@ -424,6 +624,28 @@
               <div class="faq-a" hidden>
                 <div>
                   Sim. Além do Pix, você pode pagar com cartão pelo link de cobrança. As opções são enviadas depois do contato inicial e antes da confirmação da reserva.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>Você analisa meu GitHub?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Sim, quando isso fizer sentido para o seu objetivo. Se o GitHub for relevante para sua busca por vaga, posicionamento ou evolução técnica, ele entra na preparação da sessão.
+                </div>
+              </div>
+            </li>
+            <li class="faq-item">
+              <button class="faq-q" aria-expanded="false">
+                <span>A sessão é personalizada?</span>
+                <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <div class="faq-a" hidden>
+                <div>
+                  Sim. A preparação é feita a partir do seu formulário, currículo, LinkedIn e, quando aplicável, GitHub. Não é uma apresentação pronta nem uma conversa igual para todo mundo.
                 </div>
               </div>
             </li>
@@ -454,12 +676,12 @@
             </li>
             <li class="faq-item">
               <button class="faq-q" aria-expanded="false">
-                <span>Tem suporte depois da mentoria?</span>
+                <span>O que acontece depois da mentoria?</span>
                 <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
               </button>
               <div class="faq-a" hidden>
                 <div>
-                  Sim. Você recebe um <strong>PDF consolidado</strong> com diagnóstico, principais pontos, plano de ação e próximos passos. Também pode me procurar para dúvidas pontuais sobre o plano combinado.
+                  Você recebe um <strong>PDF personalizado</strong> com diagnóstico, pontos fortes, lacunas, plano de ação, roadmap recomendado, materiais e próximos passos. A ideia é que você termine a sessão sabendo exatamente por onde continuar.
                 </div>
               </div>
             </li>
@@ -470,7 +692,7 @@
               </button>
               <div class="faq-a" hidden>
                 <div>
-                  Sim. Você pode remarcar até <strong>12h antes</strong> do horário agendado. Cancelamentos e reembolsos são alinhados antes da confirmação da reserva.
+                  Sim. Reagendamentos podem ser feitos com até <strong>24 horas de antecedência</strong>. Como a sessão é preparada previamente, cancelamentos após esse prazo ou não comparecimento são considerados como sessão realizada. Se houver uma situação excepcional, eu avalio individualmente.
                 </div>
               </div>
             </li>
@@ -482,7 +704,7 @@
     <section class="py-20" id="cta-final">
       <div class="mx-auto max-w-6xl px-6 glass rounded-2xl p-10 text-center">
         <h2 class="text-2xl md:text-3xl font-bold font-heading">Pronta(o) para o próximo passo?</h2>
-        <p class="mt-3 text-[color:var(--ink-2)]">Bora transformar seu momento atual em um plano possível de executar.</p>
+        <p class="mt-3 text-[color:var(--ink-2)]">Vamos transformar seu momento atual em um diagnóstico claro e um plano possível de executar.</p>
         <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Quero%20agendar%20minha%20Mentoria%20com%20Caf%C3%A9.%20Meu%20objetivo%20%C3%A9:%20____.%20Meu%20momento%20atual%20%C3%A9:%20transi%C3%A7%C3%A3o%20/%20primeiro%20emprego%20/%20backend%20/%20entrevistas.%20Pode%20me%20enviar%20a%20agenda%20e%20o%20formul%C3%A1rio%20de%20alinhamento?"
           class="mt-6 inline-block btn-primary glow rounded-full px-8 py-3 font-medium focus-ring"
           target="_blank"
