@@ -110,4 +110,4 @@ Se o onboarding for usado de forma privada, basta compartilhar apenas o link dir
 - E-mail: [jackeline_nascimento@hotmail.com](mailto:jackeline_nascimento@hotmail.com)
 - LinkedIn: [jackelinenascimento](https://www.linkedin.com/in/jackelinenascimento)
 - GitHub: [jackelinenascimento](https://github.com/jackelinenascimento)
-- Leitura Dev: [leitura.dev](https://leitura.dev)
+- Clube Leitura Dev: [leitura.dev](https://leitura.dev)
