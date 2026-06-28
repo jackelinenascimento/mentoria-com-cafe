@@ -31,9 +31,9 @@
         <span class="font-semibold tracking-wide font-heading">Mentoria com Café</span>
       </a>
       <nav class="hidden lg:flex items-center gap-6 text-sm text-[color:var(--ink-2)]">
-        <a class="nav-link focus-ring" href="./index.html#como-funciona">Como funciona</a>
-        <a class="nav-link focus-ring" href="./index.html#entregavel">Entregável</a>
-        <a class="nav-link focus-ring" href="./index.html#faq">FAQ</a>
+        <a class="nav-link focus-ring" href="#guia-como-funciona">Como funciona</a>
+        <a class="nav-link focus-ring" href="#guia-entregavel">Entregável</a>
+        <a class="nav-link focus-ring" href="#guia-faq">FAQ</a>
       </nav>
       <div class="flex items-center gap-3">
         <a href="https://wa.me/5511984853856?text=Oi%20Jackie!%20Tenho%20uma%20duvida%20sobre%20o%20formulario%20da%20Mentoria%20com%20Cafe."
@@ -120,6 +120,65 @@
                 <div id="progressBar" class="progress-fill"></div>
               </div>
             </div>
+
+            <section class="mt-8 faq" aria-labelledby="guide-title">
+              <div class="form-section">
+                <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+                  <div>
+                    <p class="step-kicker">Referência rápida</p>
+                    <h3 id="guide-title" class="mt-2 text-xl font-bold font-heading">Tudo o que você pode querer consultar sem sair desta página</h3>
+                  </div>
+                  <p class="helper-text">Você pode abrir só o que precisar e continuar o preenchimento normalmente.</p>
+                </div>
+
+                <ul class="faq-list mt-6">
+                  <li id="guia-como-funciona" class="faq-item">
+                    <button class="faq-q" aria-expanded="false">
+                      <span>Como funciona</span>
+                      <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-a" hidden>
+                      <div>
+                        Você entra em contato, recebe a agenda e este formulário, confirma a reserva com pagamento e participa de uma sessão individual de até 1h30 com diagnóstico e plano de ação.
+                      </div>
+                    </div>
+                  </li>
+                  <li id="guia-entregavel" class="faq-item">
+                    <button class="faq-q" aria-expanded="false">
+                      <span>O que você recebe depois</span>
+                      <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-a" hidden>
+                      <div>
+                        Após a sessão, você recebe um PDF personalizado com diagnóstico, pontos fortes, lacunas, plano de ação, roadmap recomendado, materiais e próximos passos.
+                      </div>
+                    </div>
+                  </li>
+                  <li id="guia-politica" class="faq-item">
+                    <button class="faq-q" aria-expanded="false">
+                      <span>Política de agendamento</span>
+                      <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-a" hidden>
+                      <div>
+                        Após a confirmação do pagamento, o horário fica reservado para você. Reagendamentos podem ser feitos com até 24 horas de antecedência. Cancelamentos após esse prazo ou não comparecimento são considerados como sessão realizada. Situações excepcionais podem ser analisadas individualmente.
+                      </div>
+                    </div>
+                  </li>
+                  <li id="guia-faq" class="faq-item">
+                    <button class="faq-q" aria-expanded="false">
+                      <span>FAQ rápido</span>
+                      <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="faq-a" hidden>
+                      <div>
+                        A sessão é personalizada, pode incluir análise de currículo, LinkedIn e GitHub quando fizer sentido, e o pagamento pode ser feito via Pix ou cartão.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
 
             <form
               id="onboardingForm"
@@ -319,7 +378,7 @@
                 <div class="form-section">
                   <label class="checkbox-line">
                     <input type="checkbox" name="policyConsent" required />
-                    <span>Li e concordo com a <a class="text-violet-400 hover:underline focus-ring" href="./index.html#agendamento" target="_blank" rel="noopener">política de agendamento e cancelamento</a>.</span>
+                    <span>Li e concordo com a <a class="text-violet-400 hover:underline focus-ring" href="#guia-politica">política de agendamento e cancelamento</a>.</span>
                   </label>
                 </div>
               </section>
